@@ -1,92 +1,3 @@
-### Langkah-langkah untuk Mengupload Proyek Anda ke GitHub dan Membuat README untuk Aplikasi Laravel Blade
-
-#### **1. Mengupload Proyek Anda ke GitHub**
-Untuk mengupload proyek Anda ke GitHub agar dapat dilihat oleh tim dan diperbarui bersama, ikuti langkah-langkah berikut:
-
----
-
-### **Langkah 1: Buat Repository Baru di GitHub**
-1. **Masuk ke GitHub**:
-   - Pastikan Anda sudah masuk ke akun GitHub Anda.
-
-2. **Buat Repository Baru**:
-   - Klik tombol **"New"** di bagian atas halaman GitHub.
-   - Atau kunjungi [https://github.com/new](https://github.com/new).
-
-3. **Isi Informasi Repository**:
-   - **Nama Repository**: `Sistem-Rekomendasi-Produk-E-Commerce`
-   - **Deskripsi (Opsional)**: Sistem rekomendasi produk e-commerce berbasis pola pembelian pengguna.
-   - **Pilih Private atau Public**: Pilih "Private" jika Anda ingin proyek ini hanya terlihat oleh anggota tim, atau "Public" jika ingin membagikannya dengan umum.
-   - **Tambahkan `.gitignore` dan Lisensi (Opsional)**: Pilih template `.gitignore` untuk Laravel dan pilih lisensi yang sesuai (misalnya, MIT License).
-   - Klik **"Create repository"**.
-
----
-
-### **Langkah 2: Siapkan Lokal di Komputer Anda**
-1. **Buka Terminal/Command Prompt**:
-   - Pastikan Anda memiliki Git yang terinstal di komputer Anda.
-
-2. **Buat Direktori Lokal**:
-   ```bash
-   mkdir Sistem-Rekomendasi-Produk-E-Commerce
-   cd Sistem-Rekomendasi-Produk-E-Commerce
-   ```
-
-3. **Inisialisasi Repository Lokal**:
-   ```bash
-   git init
-   ```
-
-4. **Tambahkan File dan Folder Proyek Anda**:
-   - Salin semua file dan folder dari proyek Laravel Anda ke direktori lokal ini.
-
-5. **Koneksikan ke Repository GitHub**:
-   - Salin URL HTTPS dari repository GitHub yang telah Anda buat.
-   - Jalankan perintah berikut:
-     ```bash
-     git remote add origin https://github.com/LycusCoder/Sistem-Rekomendasi-Produk-E-Commerce.git
-     ```
-
----
-
-### **Langkah 3: Commit dan Push ke GitHub**
-1. **Tambahkan Semua Perubahan**:
-   ```bash
-   git add .
-   ```
-
-2. **Commit Perubahan**:
-   ```bash
-   git commit -m "Initial commit"
-   ```
-
-3. **Push ke Repository GitHub**:
-   ```bash
-   git push -u origin main
-   ```
-   - Jika Anda menggunakan branch lain (misalnya `master`), ganti `main` dengan nama branch Anda.
-
----
-
-### **Langkah 4: Undang Anggota Tim**
-1. **Masuk ke Repository GitHub**:
-   - Buka link repository Anda di GitHub.
-
-2. **Undang Anggota Tim**:
-   - Klik tab **"Settings"** > **"Collaborators & Teams"**.
-   - Masukkan email atau username GitHub anggota tim Anda, lalu klik **"Add collaborator"**.
-
----
-
-### **2. Membuat README untuk Aplikasi Laravel Blade**
-
-Berikut adalah contoh README yang sesuai untuk aplikasi Laravel Blade. Anda bisa menyesuaikan sesuai kebutuhan proyek Anda.
-
----
-
-### **README.md untuk Aplikasi Laravel Blade**
-
-```markdown
 # Sistem Rekomendasi Produk E-Commerce Berbasis Pola Pembelian Pengguna
 
 ## Tentang Proyek
@@ -117,7 +28,120 @@ Aplikasi ini dibangun menggunakan framework **Laravel** dengan front-end menggun
 
 ## Struktur Direktori
 ```
-
+.
+|-- app
+|   |-- Http
+|   |   `-- Controllers
+|   |       |-- AuthController.php
+|   |       |-- Controller.php
+|   |       |-- DashboardController.php
+|   |       `-- LamanDepanController.php
+|   |-- Models
+|   |   |-- Category.php
+|   |   |-- Order.php
+|   |   |-- OrderItem.php
+|   |   |-- Product.php
+|   |   |-- Rating.php
+|   |   |-- Recommendation.php
+|   |   |-- Testimonial.php
+|   |   `-- User.php
+|   |-- Observers
+|   |   `-- RatingObserver.php
+|   `-- Providers
+|       `-- AppServiceProvider.php
+|-- bootstrap
+|   |-- cache
+|   |   |-- packages.php
+|   |   `-- services.php
+|   |-- app.php
+|   `-- providers.php
+|-- config
+|   |-- app.php
+|   |-- auth.php
+|   |-- cache.php
+|   |-- database.php
+|   |-- filesystems.php
+|   |-- logging.php
+|   |-- mail.php
+|   |-- queue.php
+|   |-- services.php
+|   `-- session.php
+|-- database
+|   |-- factories
+|   |   `-- UserFactory.php
+|   |-- migrations
+|   |   |-- 0001_01_01_000000_create_users_table.php
+|   |   |-- 0001_01_01_000001_create_cache_table.php
+|   |   |-- 0001_01_01_000002_create_jobs_table.php
+|   |   `-- 2025_04_14_101534_create_ecommerce_tables.php
+|   |-- seeders
+|   |   |-- data
+|   |   |   |-- category.json
+|   |   |   |-- deskripsi_template.json
+|   |   |   |-- products.json
+|   |   |   |-- testimonial.json
+|   |   |   `-- users.json
+|   |   |-- CategorySeeder.php
+|   |   |-- DatabaseSeeder.php
+|   |   |-- OrderItemSeeder.php
+|   |   |-- OrderSeeder.php
+|   |   |-- ProductSeeder.php
+|   |   |-- RatingSeeder.php
+|   |   |-- RecommendationSeeder.php
+|   |   |-- TestimonialSeeder.php
+|   |   `-- UserSeeder.php
+|   `-- database.sqlite
+|-- public
+|   |-- default_avatar.png
+|   |-- default_icon.png
+|   |-- default_product.png
+|   |-- favicon.ico
+|   |-- hot
+|   |-- index.php
+|   `-- robots.txt
+|-- resources
+|   |-- css
+|   |   `-- app.css
+|   |-- js
+|   |   |-- app.js
+|   |   `-- bootstrap.js
+|   `-- views
+|       |-- auth
+|       |   |-- passwords
+|       |   |   |-- email.blade.php
+|       |   |   `-- reset.blade.php
+|       |   |-- login.blade.php
+|       |   `-- register.blade.php
+|       |-- components
+|       |   `-- lamandepan
+|       |       |-- category-modal.blade.php
+|       |       |-- hero-banner.blade.php
+|       |       |-- product-card.blade.php
+|       |       `-- testimonial.blade.php
+|       |-- dashboard
+|       |   `-- index.blade.php
+|       |-- lamandepan
+|       |   `-- index.blade.php
+|       |-- layouts
+|       |   `-- app.blade.php
+|       `-- welcome.blade.php
+|-- routes
+|   |-- console.php
+|   `-- web.php
+|-- tests
+|   |-- Feature
+|   |   `-- ExampleTest.php
+|   |-- Unit
+|   |   `-- ExampleTest.php
+|   `-- TestCase.php
+|-- README.md
+|-- artisan
+|-- composer.json
+|-- composer.lock
+|-- package-lock.json
+|-- package.json
+|-- phpunit.xml
+`-- vite.config.js
 ```
 
 ## Cara Menjalankan Proyek
