@@ -1,0 +1,362 @@
+[
+    {
+        "name": "Andi Pratama",
+        "email": "andi.prtm@nourivex.tech",
+        "password": "andi123",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Budi Santoso",
+        "email": "budi.snt@nourivex.tech",
+        "password": "budi456",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Citra Wijaya",
+        "email": "citra.wjy@nourivex.tech",
+        "password": "citra789",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Dewi Lestari",
+        "email": "dewi.lst@nourivex.tech",
+        "password": "dewi101",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Eko Prasetyo",
+        "email": "eko.prst@nourivex.tech",
+        "password": "eko202",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Fitri Anggraini",
+        "email": "fitri.ang@nourivex.tech",
+        "password": "fitri303",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Gita Permata",
+        "email": "gita.prm@nourivex.tech",
+        "password": "gita404",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Hendra Kusuma",
+        "email": "hendra.ksm@nourivex.tech",
+        "password": "hendra505",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Indah Purnama",
+        "email": "indah.prm@nourivex.tech",
+        "password": "indah606",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Joko Susilo",
+        "email": "joko.ssl@nourivex.tech",
+        "password": "joko707",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Kartika Sari",
+        "email": "kartika.sri@nourivex.tech",
+        "password": "kartika808",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Lutfi Rahman",
+        "email": "lutfi.rhm@nourivex.tech",
+        "password": "lutfi909",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Mira Ningsih",
+        "email": "mira.nsh@nourivex.tech",
+        "password": "mira101",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Nurul Hidayah",
+        "email": "nurul.hdy@nourivex.tech",
+        "password": "nurul202",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Oki Saputra",
+        "email": "oki.spt@nourivex.tech",
+        "password": "oki303",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Putri Ayu",
+        "email": "putri.ayu@nourivex.tech",
+        "password": "putri404",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Rendi Setiawan",
+        "email": "rendi.stw@nourivex.tech",
+        "password": "rendi505",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Siska Wulandari",
+        "email": "siska.wld@nourivex.tech",
+        "password": "siska606",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Taufik Hidayat",
+        "email": "taufik.hdt@nourivex.tech",
+        "password": "taufik707",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Vina Marsha",
+        "email": "vina.mrs@nourivex.tech",
+        "password": "vina808",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Wahyu Nugraha",
+        "email": "wahyu.nga@nourivex.tech",
+        "password": "wahyu111",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Xena Kusuma",
+        "email": "xena.ksm@nourivex.tech",
+        "password": "xena222",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Yanto Prasetyo",
+        "email": "yanto.pst@nourivex.tech",
+        "password": "yanto333",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Zara Permata",
+        "email": "zara.prm@nourivex.tech",
+        "password": "zara444",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Adi Wijaya",
+        "email": "adi.wjy@nourivex.tech",
+        "password": "adi555",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Bagus Setiawan",
+        "email": "bagus.stw@nourivex.tech",
+        "password": "bagus666",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Candra Kusuma",
+        "email": "candra.ksm@nourivex.tech",
+        "password": "candra777",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Dina Anggraini",
+        "email": "dina.ang@nourivex.tech",
+        "password": "dina888",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Evan Pratama",
+        "email": "evan.prt@nourivex.tech",
+        "password": "evan999",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Farah Lestari",
+        "email": "farah.lst@nourivex.tech",
+        "password": "farah000",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Gita Santoso",
+        "email": "gita.snt@nourivex.tech",
+        "password": "gita111",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Hendra Wijaya",
+        "email": "hendra.wjy@nourivex.tech",
+        "password": "hendra222",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Intan Prasetyo",
+        "email": "intan.pst@nourivex.tech",
+        "password": "intan333",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Jaka Kusuma",
+        "email": "jaka.ksm@nourivex.tech",
+        "password": "jaka444",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Kiki Anggraini",
+        "email": "kiki.ang@nourivex.tech",
+        "password": "kiki555",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Lia Pratama",
+        "email": "lia.prt@nourivex.tech",
+        "password": "lia666",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Mira Lestari",
+        "email": "mira.lst@nourivex.tech",
+        "password": "mira777",
+        "preferences": {
+            "theme": "dark",
+            "notifications": false
+        }
+    },
+    {
+        "name": "Nanda Santoso",
+        "email": "nanda.snt@nourivex.tech",
+        "password": "nanda888",
+        "preferences": {
+            "theme": "light",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Oscar Wijaya",
+        "email": "oscar.wjy@nourivex.tech",
+        "password": "oscar999",
+        "preferences": {
+            "theme": "dark",
+            "notifications": true
+        }
+    },
+    {
+        "name": "Putri Kusuma",
+        "email": "putri.ksm@nourivex.tech",
+        "password": "putri000",
+        "preferences": {
+            "theme": "light",
+            "notifications": false
+        }
+    }
+]
