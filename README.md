@@ -195,12 +195,14 @@ Aplikasi ini dibangun menggunakan framework **Laravel** dengan front-end menggun
 Kami menerima kontribusi dari siapa pun! Jika Anda ingin berkontribusi, silakan buka issue atau pull request.
 
 ## Kontak
+
 Jika ada pertanyaan atau masukan, silakan hubungi:
-- [Muhammad Affif]: affif@nourivex.tech
-- [Yesa Anggit Prayugo]: email@example.com
-- [Siti Novia Desi Nurkhikmah]: email@example.com
-- [Naufal Miftahul Arsyi]: email@example.com
-- [Imzy Zulijar Setiawan]: email@example.com
+
+- 👨‍💻 [Muhammad Affif]: affif@nourivex.tech
+- 🌟 [Yesa Anggit Prayugo]: email@example.com
+- 📝 [Siti Novia Desi Nurkhikmah]: email@example.com
+- 🚀 [Naufal Miftahul Arsyij]: email@example.com
+- 🎉 [Imzy Zulijar Setiawan]: email@example.com
 
 ## Lisensi
 Proyek ini dibuat di bawah lisensi [MIT License](LICENSE).
