@@ -57,6 +57,11 @@
                 <a href="/" class="py-2 px-4 rounded hover:bg-blue-50 text-gray-700 flex items-center">
                     <i class="fas fa-house mr-2 text-lg"></i> Home
                 </a>
+                @auth
+                    <a href="/dashboard" class="py-2 px-4 rounded hover:bg-blue-50 text-gray-700 flex items-center">
+                        <i class="fas fa-gauge-high mr-2 text-lg"></i> Dashboard
+                    </a>
+                @endauth
                 <a href="/recommendations" class="py-2 px-4 rounded hover:bg-blue-50 text-gray-700 flex items-center">
                     <i class="fas fa-lightbulb mr-2 text-lg"></i> Rekomendasi
                 </a>
@@ -64,21 +69,18 @@
                     <i class="fas fa-circle-info mr-2 text-lg"></i> Tentang
                 </a>
                 @auth
-                    <a href="/dashboard" class="text-gray-700 hover:text-blue-600 transition-colors flex items-center">
-                        <i class="fas fa-gauge-high mr-2"></i> Dashboard
-                    </a>
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
-                        <button type="submit" class="text-red-600 hover:text-red-800 transition-colors flex items-center">
+                        <button type="submit" class="w-full text-left py-2 px-4 rounded hover:bg-red-50 text-red-600 flex items-center">
                             <i class="fas fa-sign-out-alt mr-2"></i> Logout
                         </button>
                     </form>
                 @else
-                    <a href="/login" class="text-gray-700 hover:text-blue-600 transition-colors flex items-center">
-                        <i class="fas fa-right-to-bracket mr-2"></i> Login
+                    <a href="/login" class="py-2 px-4 rounded hover:bg-blue-50 text-gray-700 flex items-center">
+                        <i class="fas fa-right-to-bracket mr-2 text-lg"></i> Login
                     </a>
-                    <a href="/register" class="text-gray-700 hover:text-blue-600 transition-colors flex items-center">
-                        <i class="fas fa-user-plus mr-2"></i> Register
+                    <a href="/register" class="py-2 px-4 rounded hover:bg-blue-50 text-gray-700 flex items-center">
+                        <i class="fas fa-user-plus mr-2 text-lg"></i> Register
                     </a>
                 @endauth
             </nav>

@@ -4,9 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LamanDepanController;
 
 Route::get('/', [LamanDepanController::class, 'index'])->name('home');
-Route::get('/testimonials', [LamanDepanController::class, 'testimonials'])->name('testimonials');
 
 
+use App\Http\Controllers\DashboardController;
+
+Route::middleware('auth')->group(function () {
+    Route::get('/testimonials', [LamanDepanController::class, 'testimonials'])->name('testimonials');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 ////////// Bagian Autentikasi /////////////
 
