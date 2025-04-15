@@ -1,242 +1,1152 @@
 [
-  {
-
-    "name": "Smartphone Evercoss Winner X",
-    "category": "elektronik",
-    "price": 1499000,
-    "image": "https://cdn.ralali.id/cdn-cgi/image/f=auto,w=250/assets/img/Libraries/249932_Evercoss-Winner-X-Glow-R45-Smartphone-Gold-8GB-1GB_O8cPVgo4ctD06IbS_1544180424.jpg",
-    "rating": 4.3
-  },
-  {
-
-    "name": "Sepatu Eiger X Tyranno WS Shoes",
-    "category": "olahraga",
-    "price": 689000,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/12/3/a5f785fa-4056-4c98-aa23-5439aaf796fc.jpg",
-    "rating": 4.7
-  },
-  {
-
-    "name": "Batik Tulis Solo Cap Keris",
-    "category": "fashion",
-    "price": 875000,
-    "image": "https://images.tokopedia.net/img/cache/700/hDjmkQ/2021/10/21/1d33d4aa-bbf6-455e-b19d-0c51220b4571.jpg",
-    "rating": 4.9
-  },
-  {
-
-    "name": "Indomie Goreng Rendang 1 Dus (40 pcs)",
-    "category": "makanan",
-    "price": 165000,
-    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-54266629/indomie_indomie_goreng_rasa_rendang_full00.jpg",
-    "rating": 4.8
-  },
-  {
-
-    "name": "Blender Miyako BL-102 PL",
-    "category": "perlengkapan_rumah",
-    "price": 299000,
-    "image": "https://bimg.akulaku.net/goods/spu/09ecf10843284fe38223842aaf67d6609981.jpg?w=726&q=80&fit=1",
-    "rating": 4.5
-  },
-  {
-
-    "name": "Kopi Kapal Api Special Mix 250g",
-    "category": "minuman",
-    "price": 27500,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/8/1/4872dd01-ff5b-42a4-acaa-decdb097d57e.jpg",
-    "rating": 4.6
-  },
-  {
-
-    "name": "Wardah Sunscreen SPF 50",
-    "category": "kecantikan",
-    "price": 89500,
-    "image": "https://images.soco.id/4aee7ea7-8bfc-4f0f-b5f1-497fd1061d2b-image-0-1717727619984",
-    "rating": 4.7
-  },
-  {
-
-    "name": "Buku Laskar Pelangi (Andrea Hirata)",
-    "category": "buku",
-    "price": 85000,
-    "image": "https://upload.wikimedia.org/wikipedia/id/8/8e/Laskar_pelangi_sampul.jpg",
-    "rating": 4.9
-  },
-  {
-
-    "name": "Helm INK KNIGHT Solid Hitam",
-    "category": "otomotif",
-    "price": 499000,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2024/1/13/3e297d76-e166-47e1-a900-c5c9cfd864e0.jpg",
-    "rating": 4.4
-  },
-  {
-
-    "name": "Jamu Nyonya Meneer Kunir Asam",
-    "category": "kesehatan",
-    "price": 24500,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/4/26/5844bd73-7eac-4c8d-a847-4fdd8a12d55c.png",
-    "rating": 4.5
-  },
-  {
-
-    "name": "TV Polytron 32 Inch Android TV",
-    "category": "elektronik",
-    "price": 2499000,
-    "image": "https://cdn.polytron.co.id/public-assets/polytroncoid/2024/04/5-rekomen-idul-fitri_image-TV.jpg",
-    "rating": 4.6
-  },
-  {
-
-    "name": "Keris Jawa Pamor Beras Wutah",
-    "category": "seni_budaya",
-    "price": 3500000,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/11/27/f9b13a61-1f00-4d60-b7e5-039177a1f86a.jpg",
-    "rating": 5.0
-  },
-  {
-
-    "name": "Chitato Rasa Sapi Panggang 65g",
-    "category": "snack",
-    "price": 12500,
-    "image": "https://www.tokopoint.com/cdn/shop/products/8168660_7dc351a1-cc63-403e-8777-f92084a101e3_800_800_grande.jpg?v=1654352897",
-    "rating": 4.8
-  },
-  {
-
-    "name": "Panasonic Rice Cooker 1.8L",
-    "category": "perlengkapan_rumah",
-    "price": 475000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFyOA2Se3_8p1-0ESZ9kTD1tz0DroQI1KfuA&s",
-    "rating": 4.7
-  },
-  {
-
-    "name": "Sepeda United Detroit 26 Inch",
-    "category": "olahraga",
-    "price": 2899000,
-    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//95/MTA-69000329/united_sepeda_gunung_mtb_26_inch_united_detroit_sv_7_speed_alloy_sni_garansi_full04_jzn60a61.jpg",
-    "rating": 4.5
-  },
-  {
-
-    "name": "Kemeja Pantai Lurik Yogyakarta",
-    "category": "fashion",
-    "price": 189000,
-    "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/25/98921090-e621-4d33-a173-010d19c565b5.png",
-    "rating": 4.6
-  },
-  {
-
-    "name": "JCO Donuts 1 Box (6 pcs)",
-    "category": "makanan",
-    "price": 75000,
-    "image": "https://foto.kontan.co.id/JmF4UPzGbFYLPXJTS9z7qN7aRHQ=/smart/2023/08/22/2126665954p.jpg",
-    "rating": 4.8
-  },
-  {
-
-    "name": "Lipstik Make Over Creammy Matte",
-    "category": "kecantikan",
-    "price": 112000,
-    "image": "https://makeover-bucket-testing.s3.ap-southeast-1.amazonaws.com/images/productthumbnail/c95f3e22bd110fb4d879f49a1ef72e59a60f878a.jpg",
-    "rating": 4.7
-  },
-  {
-
-    "name": "Buku Filosofi Kopi (Dewi Lestari)",
-    "category": "buku",
-    "price": 79000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbeHD38fjQ43Ocq7PmUKYGNPuwsmMUSRtjQ&s",
-    "rating": 4.8
-  },
-  {
-
-    "name": "Wayang Kulit Ramayana Set",
-    "category": "seni_budaya",
-    "price": 1250000,
-    "image": "https://i.pinimg.com/736x/3d/2d/a2/3d2da2c234095c8882ff1122a02f7239.jpg",
-    "rating": 4.9
-  },
-  {
-
-    "name": "Laptop Asus VivoBook S14",
-    "category": "elektronik",
-    "price": 7500000,
-    "image": "https://dlcdnwebimgs.asus.com/gain/94332ee6-a61b-470a-a100-244ef9cfc139/w800",
-    "rating": 4.5
-  },
-  {
-
-    "name": "Jam Tangan Casio Digital",
-    "category": "elektronik",
-    "price": 550000,
-    "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/4/6/b76cede3-423f-425a-a8ac-495fcb856ec3.jpg",
-    "rating": 4.6
-  },
-  {
-
-    "name": "Baju Batik Modern",
-    "category": "fashion",
-    "price": 125000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQS7v-D3qDtcywCK8Dp-V_vUPPc63uF1P_mg&s",
-    "rating": 4.4
-  },
-  {
-
-    "name": "Sandal Gunung Outdoor",
-    "category": "olahraga",
-    "price": 89000,
-    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/108/MTA-148940891/outdoor_pro_sandal_gunung_outdoor_pro_coral_original_sandal_hiking_trekking_pro_outdoor_full08_6a8f6087.jpg",
-    "rating": 4.2
-  },
-  {
-
-    "name": "Kamera Canon EOS 200D",
-    "category": "elektronik",
-    "price": 9500000,
-    "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/12/9/52673df6-44af-4396-885f-a5756db309a2.jpg",
-    "rating": 4.8
-  },
-  {
-
-    "name": "Mixer Philips HR7620",
-    "category": "perlengkapan_rumah",
-    "price": 650000,
-    "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-ltak4pwtxavabe",
-    "rating": 4.3
-  },
-  {
-
-    "name": "Baju Renang Anak",
-    "category": "fashion",
-    "price": 75000,
-    "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/7/15/1683f3fc-99e1-4807-ae53-eaa60d13d647.jpg",
-    "rating": 4.1
-  },
-  {
-
-    "name": "Sapu Lidi Tradisional",
-    "category": "perlengkapan_rumah",
-    "price": 15000,
-    "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/6/29/5b3e6cff-60fc-4989-983f-bb45ce8c481f.jpg",
-    "rating": 4.0
-  },
-  {
-
-    "name": "Bantal Leher Memory Foam",
-    "category": "perlengkapan_rumah",
-    "price": 125000,
-    "image": "https://upload.jaknot.com/2024/08/images/products/9f0991/original/rhodey-bantal-leher-u-shape-travel-neck-pillow-memory-foam-beludru-ser43.jpg",
-    "rating": 4.5
-  },
-  {
-
-    "name": "Mie Sedaap Instant",
-    "category": "makanan",
-    "price": 2500,
-    "image": "https://c.alfagift.id/product/1/1_A7145990001037_20241101171439547_base.jpg",
-    "rating": 4.7
-  }
+    {
+        "name": "Smartphone Evercoss Winner X",
+        "category": "elektronik",
+        "price": 799000,
+        "image": "https://cdn.ralali.id/cdn-cgi/image/f=auto,w=250/assets/img/Libraries/249932_Evercoss-Winner-X-Glow-R45-Smartphone-Gold-8GB-1GB_O8cPVgo4ctD06IbS_1544180424.jpg",
+        "rating": 4.3
+    },
+    {
+        "name": "Sepatu Eiger X Tyranno WS Shoes",
+        "category": "olahraga",
+        "price": 1199000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/12/3/a5f785fa-4056-4c98-aa23-5439aaf796fc.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Batik Tulis Solo Cap Keris",
+        "category": "fashion",
+        "price": 110000,
+        "image": "https://images.tokopedia.net/img/cache/700/hDjmkQ/2021/10/21/1d33d4aa-bbf6-455e-b19d-0c51220b4571.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Indomie Goreng Rendang 1 Dus (40 pcs)",
+        "category": "makanan",
+        "price": 175000,
+        "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-54266629/indomie_indomie_goreng_rasa_rendang_full00.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Blender Miyako BL-102 PL",
+        "category": "perlengkapan_rumah",
+        "price": 325000,
+        "image": "https://bimg.akulaku.net/goods/spu/09ecf10843284fe38223842aaf67d6609981.jpg?w=726&q=80&fit=1",
+        "rating": 4.5
+    },
+    {
+        "name": "Kopi Kapal Api Special Mix 250g",
+        "category": "minuman",
+        "price": 30000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/8/1/4872dd01-ff5b-42a4-acaa-decdb097d57e.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Wardah Sunscreen SPF 50",
+        "category": "kecantikan",
+        "price": 95000,
+        "image": "https://images.soco.id/4aee7ea7-8bfc-4f0f-b5f1-497fd1061d2b-image-0-1717727619984",
+        "rating": 4.7
+    },
+    {
+        "name": "Buku Laskar Pelangi (Andrea Hirata)",
+        "category": "buku",
+        "price": 95000,
+        "image": "https://upload.wikimedia.org/wikipedia/id/8/8e/Laskar_pelangi_sampul.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Helm INK KNIGHT Solid Hitam",
+        "category": "otomotif",
+        "price": 550000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2024/1/13/3e297d76-e166-47e1-a900-c5c9cfd864e0.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Jamu Nyonya Meneer Kunir Asam",
+        "category": "kesehatan",
+        "price": 26000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/4/26/5844bd73-7eac-4c8d-a847-4fdd8a12d55c.png",
+        "rating": 4.5
+    },
+    {
+        "name": "TV Polytron 32 Inch Android TV",
+        "category": "elektronik",
+        "price": 2699000,
+        "image": "https://cdn.polytron.co.id/public-assets/polytroncoid/2024/04/5-rekomen-idul-fitri_image-TV.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Keris Jawa Pamor Beras Wutah",
+        "category": "seni_budaya",
+        "price": 3750000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/11/27/f9b13a61-1f00-4d60-b7e5-039177a1f86a.jpg",
+        "rating": 5.0
+    },
+    {
+        "name": "Chitato Rasa Sapi Panggang 65g",
+        "category": "snack",
+        "price": 13500,
+        "image": "https://www.tokopoint.com/cdn/shop/products/8168660_7dc351a1-cc63-403e-8777-f92084a101e3_800_800_grande.jpg?v=1654352897",
+        "rating": 4.8
+    },
+    {
+        "name": "Panasonic Rice Cooker 1.8L",
+        "category": "perlengkapan_rumah",
+        "price": 500000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFyOA2Se3_8p1-0ESZ9kTD1tz0DroQI1KfuA&s",
+        "rating": 4.7
+    },
+    {
+        "name": "Sepeda United Detroit 26 Inch",
+        "category": "olahraga",
+        "price": 2999000,
+        "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//95/MTA-69000329/united_sepeda_gunung_mtb_26_inch_united_detroit_sv_7_speed_alloy_sni_garansi_full04_jzn60a61.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Kemeja Pantai Lurik Yogyakarta",
+        "category": "fashion",
+        "price": 199000,
+        "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/25/98921090-e621-4d33-a173-010d19c565b5.png",
+        "rating": 4.6
+    },
+    {
+        "name": "JCO Donuts 1 Box (6 pcs)",
+        "category": "makanan",
+        "price": 79000,
+        "image": "https://foto.kontan.co.id/JmF4UPzGbFYLPXJTS9z7qN7aRHQ=/smart/2023/08/22/2126665954p.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Lipstik Make Over Creammy Matte",
+        "category": "kecantikan",
+        "price": 120000,
+        "image": "https://makeover-bucket-testing.s3.ap-southeast-1.amazonaws.com/images/productthumbnail/c95f3e22bd110fb4d879f49a1ef72e59a60f878a.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Buku Filosofi Kopi (Dewi Lestari)",
+        "category": "buku",
+        "price": 85000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIbeHD38fjQ43Ocq7PmUKYGNPuwsmMUSRtjQ&s",
+        "rating": 4.8
+    },
+    {
+        "name": "Wayang Kulit Ramayana Set",
+        "category": "seni_budaya",
+        "price": 1350000,
+        "image": "https://i.pinimg.com/736x/3d/2d/a2/3d2da2c234095c8882ff1122a02f7239.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Laptop Asus VivoBook S14",
+        "category": "elektronik",
+        "price": 7800000,
+        "image": "https://dlcdnwebimgs.asus.com/gain/94332ee6-a61b-470a-a100-244ef9cfc139/w800",
+        "rating": 4.5
+    },
+    {
+        "name": "Jam Tangan Casio Digital",
+        "category": "elektronik",
+        "price": 580000,
+        "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/4/6/b76cede3-423f-425a-a8ac-495fcb856ec3.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Baju Batik Modern",
+        "category": "fashion",
+        "price": 135000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQS7v-D3qDtcywCK8Dp-V_vUPPc63uF1P_mg&s",
+        "rating": 4.4
+    },
+    {
+        "name": "Sandal Gunung Outdoor",
+        "category": "olahraga",
+        "price": 95000,
+        "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/108/MTA-148940891/outdoor_pro_sandal_gunung_outdoor_pro_coral_original_sandal_hiking_trekking_pro_outdoor_full08_6a8f6087.jpg",
+        "rating": 4.2
+    },
+    {
+        "name": "Kamera Canon EOS 200D",
+        "category": "elektronik",
+        "price": 9800000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/12/9/52673df6-44af-4396-885f-a5756db309a2.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Mixer Philips HR7620",
+        "category": "perlengkapan_rumah",
+        "price": 680000,
+        "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-ltak4pwtxavabe",
+        "rating": 4.3
+    },
+    {
+        "name": "Baju Renang Anak",
+        "category": "fashion",
+        "price": 85000,
+        "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/7/15/1683f3fc-99e1-4807-ae53-eaa60d13d647.jpg",
+        "rating": 4.1
+    },
+    {
+        "name": "Sapu Lidi Tradisional",
+        "category": "perlengkapan_rumah",
+        "price": 18000,
+        "image": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/6/29/5b3e6cff-60fc-4989-983f-bb45ce8c481f.jpg",
+        "rating": 4.0
+    },
+    {
+        "name": "Bantal Leher Memory Foam",
+        "category": "perlengkapan_rumah",
+        "price": 135000,
+        "image": "https://upload.jaknot.com/2024/08/images/products/9f0991/original/rhodey-bantal-leher-u-shape-travel-neck-pillow-memory-foam-beludru-ser43.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Mie Sedaap Instant",
+        "category": "makanan",
+        "price": 2800,
+        "image": "https://c.alfagift.id/product/1/1_A7145990001037_20241101171439547_base.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Apple Iphone 15 128GB",
+        "category": "elektronik",
+        "price": 11599000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/10/27/a622a78c-d18e-4b82-9648-0aeb046d6dd4.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Melpona Pure Vanilla Extract Ekstrak Vanili Murni 100 ml",
+        "category": "bahan makanan",
+        "price": 105000,
+        "image": "https://example.com/vanilla-extract.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Biji Vanili Planifolia Grade A Seal Vacuum 1 KG",
+        "category": "bahan makanan",
+        "price": 2650000,
+        "image": "https://example.com/vanilla-beans.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Vanillie / Vanili bubuk W isi 100 sachet per dus",
+        "category": "bahan makanan",
+        "price": 11000,
+        "image": "https://example.com/vanilla-powder.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "High Quality Vanilla Beans / Vanili Kering Grade A 17cm Up",
+        "category": "bahan makanan",
+        "price": 1000000,
+        "image": "https://example.com/dried-vanilla.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Kalender 2025 Bali kalender saka Bali 2025",
+        "category": "alat tulis",
+        "price": 25000,
+        "image": "https://example.com/bali-calendar.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Kalender Meja Bali Bambang",
+        "category": "alat tulis",
+        "price": 68000,
+        "image": "https://example.com/bali-desk-calendar.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Pertamax (1 liter)",
+        "category": "bensin",
+        "price": 12500,
+        "image": "https://example.com/pertamax.jpg",
+        "rating": 4.3
+    },
+    {
+        "name": "Dexlite (1 liter)",
+        "category": "bensin",
+        "price": 14000,
+        "image": "https://example.com/dexlite.jpg",
+        "rating": 4.2
+    },
+    {
+        "name": "Apple iPhone 15 128GB",
+        "category": "elektronik",
+        "price": 11599000,
+        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/10/27/a622a78c-d18e-4b82-9648-0aeb046d6dd4.png",
+        "rating": 4.7
+    },
+    {
+        "name": "Samsung Galaxy S23 Ultra",
+        "category": "elektronik",
+        "price": 14999000,
+        "image": "https://example.com/samsung-s23-ultra.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Xiaomi Redmi Note 13",
+        "category": "elektronik",
+        "price": 3599000,
+        "image": "https://example.com/xiaomi-note13.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Lenovo IdeaPad Slim 5",
+        "category": "elektronik",
+        "price": 9499000,
+        "image": "https://example.com/lenovo-ideapad.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Sony WH-1000XM5 Headphones",
+        "category": "elektronik",
+        "price": 4999000,
+        "image": "https://example.com/sony-headphones.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Canon EOS R5 Mirrorless Camera",
+        "category": "elektronik",
+        "price": 54999000,
+        "image": "https://example.com/canon-eos-r5.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Vanili Basah (1 kg)",
+        "category": "bahan makanan",
+        "price": 500000,
+        "image": "https://example.com/fresh-vanilla.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Vanili Kering Biasa (1 kg)",
+        "category": "bahan makanan",
+        "price": 800000,
+        "image": "https://example.com/dried-vanilla-basic.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Kalender Dinding Caka Saka Bali Nasional",
+        "category": "alat tulis",
+        "price": 15000,
+        "image": "https://example.com/wall-calendar-bali.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Kalender Bali 2024 Eceran Bangbang Gede Rawi",
+        "category": "alat tulis",
+        "price": 25000,
+        "image": "https://example.com/bali-calendar-2024.jpg",
+        "rating": 4.3
+    },
+    {
+        "name": "Vanili Wangi Sachet (10 pcs)",
+        "category": "bahan makanan",
+        "price": 3500,
+        "image": "https://example.com/vanilla-sachet.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Vanili R Sachet (100 pcs)",
+        "category": "bahan makanan",
+        "price": 24000,
+        "image": "https://example.com/vanilla-sachet-pack.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Apple Watch Series 9",
+        "category": "elektronik",
+        "price": 7999000,
+        "image": "https://example.com/apple-watch-series9.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "JBL Flip 6 Portable Speaker",
+        "category": "elektronik",
+        "price": 1799000,
+        "image": "https://example.com/jbl-flip6.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Logitech MX Master 3S Mouse",
+        "category": "elektronik",
+        "price": 1299000,
+        "image": "https://example.com/logitech-mouse.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "DJI Mini 3 Pro Drone",
+        "category": "elektronik",
+        "price": 10999000,
+        "image": "https://example.com/dji-mini3-pro.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "GoPro HERO11 Black",
+        "category": "elektronik",
+        "price": 7499000,
+        "image": "https://example.com/gopro-hero11.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Pensil Kayu 2B (1 lusin)",
+        "category": "perlengkapan sekolah",
+        "price": 12000,
+        "image": "https://example.com/pencil-2b.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Penghapus Karet Putih (1 pack)",
+        "category": "perlengkapan sekolah",
+        "price": 8000,
+        "image": "https://example.com/eraser.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Pulpen Standar Hitam (1 lusin)",
+        "category": "perlengkapan sekolah",
+        "price": 15000,
+        "image": "https://example.com/pen-black.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Cairan Pengoreksi Tipe-X (1 botol)",
+        "category": "perlengkapan sekolah",
+        "price": 10000,
+        "image": "https://example.com/correction-fluid.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Buku Catatan Kulit 50 Lembar",
+        "category": "perlengkapan sekolah",
+        "price": 25000,
+        "image": "https://example.com/notebook.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Penggaris Plastik 30 cm",
+        "category": "perlengkapan sekolah",
+        "price": 5000,
+        "image": "https://example.com/ruler.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Pensil Warna Crayon 12 Warna",
+        "category": "perlengkapan sekolah",
+        "price": 30000,
+        "image": "https://example.com/crayons.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Spidol Permanen Hitam",
+        "category": "perlengkapan sekolah",
+        "price": 12000,
+        "image": "https://example.com/permanent-marker.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Highlighter Stabilo 5 Warna",
+        "category": "perlengkapan sekolah",
+        "price": 45000,
+        "image": "https://example.com/highlighter.jpg",
+        "rating": 4.9
+    },
+    {
+        "name": "Tempat Pensil Plastik Transparan",
+        "category": "perlengkapan sekolah",
+        "price": 18000,
+        "image": "https://example.com/pencil-case.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Kalkulator Ilmiah Casio FX-991",
+        "category": "perlengkapan sekolah",
+        "price": 300000,
+        "image": "https://example.com/scientific-calculator.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Papan Tulis Mini Portable",
+        "category": "perlengkapan sekolah",
+        "price": 85000,
+        "image": "https://example.com/mini-whiteboard.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Tas Ransel Sekolah Anak",
+        "category": "perlengkapan sekolah",
+        "price": 150000,
+        "image": "https://example.com/school-bag.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Alat Tulis Sekolah 8 in 1",
+        "category": "perlengkapan sekolah",
+        "price": 18000,
+        "image": "https://example.com/school-stationery-set.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Paket Lengkap Perlengkapan Sekolah",
+        "category": "perlengkapan sekolah",
+        "price": 53923,
+        "image": "https://example.com/full-school-kit.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Buku Gambar A4 20 Lembar",
+        "category": "perlengkapan sekolah",
+        "price": 15000,
+        "image": "https://example.com/drawing-book.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Gunting Sekolah Anti Karat",
+        "category": "perlengkapan sekolah",
+        "price": 20000,
+        "image": "https://example.com/school-scissors.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Lem Kertas Glue Stick Besar",
+        "category": "perlengkapan sekolah",
+        "price": 10000,
+        "image": "https://example.com/glue-stick.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Stapler dan Isi Paku (1 set)",
+        "category": "perlengkapan sekolah",
+        "price": 25000,
+        "image": "https://example.com/stapler-set.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Pensil Mekanik 0.5 mm + Refill",
+        "category": "perlengkapan sekolah",
+        "price": 35000,
+        "image": "https://example.com/mechanical-pencil.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Buku Latihan Matematika SD",
+        "category": "perlengkapan sekolah",
+        "price": 40000,
+        "image": "https://example.com/math-book.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Buku Diary Harian Anak",
+        "category": "perlengkapan sekolah",
+        "price": 28000,
+        "image": "https://example.com/diary-book.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Map Plastik Folio 10 pcs",
+        "category": "perlengkapan sekolah",
+        "price": 12000,
+        "image": "https://example.com/plastic-folder.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Kotak Bekal Sekolah Anak",
+        "category": "perlengkapan sekolah",
+        "price": 50000,
+        "image": "https://example.com/lunch-box.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Botol Minum Stainless 500ml",
+        "category": "perlengkapan sekolah",
+        "price": 75000,
+        "image": "https://example.com/water-bottle.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "AQUA Elektronik AQW-800F Mesin Cuci Top Loading 8 Kg",
+        "category": "elektronik",
+        "price": 2699000,
+        "image": "https://example.com/aqua-washing-machine.jpg",
+        "rating": 4.7 [
+            [
+                1
+            ]
+        ]
+    },
+    {
+        "name": "Mesin Cuci Mini Portable 2 Tabung 8L",
+        "category": "elektronik",
+        "price": 1200000,
+        "image": "https://example.com/mini-washing-machine.jpg",
+        "rating": 4.5 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Deli Mesin Penghitung Uang / Money Counter CT990",
+        "category": "elektronik",
+        "price": 1800000,
+        "image": "https://example.com/money-counter.jpg",
+        "rating": 4.6 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Android Box TV Smart 4K",
+        "category": "elektronik",
+        "price": 550000,
+        "image": "https://example.com/android-box.jpg",
+        "rating": 4.4 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "TV Quantum Dots 55 Inch - AQUA Elektronik",
+        "category": "elektronik",
+        "price": 12000000,
+        "image": "https://example.com/quantum-dot-tv.jpg",
+        "rating": 4.8 [
+            [
+                8
+            ]
+        ]
+    },
+    {
+        "name": "Dispenser Air Panas-Dingin Sharp",
+        "category": "elektronik",
+        "price": 1200000,
+        "image": "https://example.com/water-dispenser.jpg",
+        "rating": 4.6 [
+            [
+                4
+            ]
+        ]
+    },
+    {
+        "name": "Kipas Angin Tower Midea",
+        "category": "elektronik",
+        "price": 1500000,
+        "image": "https://example.com/tower-fan.jpg",
+        "rating": 4.5 [
+            [
+                1
+            ]
+        ]
+    },
+    {
+        "name": "Blender Philips HR2118",
+        "category": "elektronik",
+        "price": 950000,
+        "image": "https://example.com/blender.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Mikrowave Sharp R-21A2IN",
+        "category": "elektronik",
+        "price": 1700000,
+        "image": "https://example.com/microwave.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Magic Com Cosmos 1.8 Liter",
+        "category": "elektronik",
+        "price": 450000,
+        "image": "https://example.com/rice-cooker.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Vacuum Cleaner Panasonic MC-CG331",
+        "category": "elektronik",
+        "price": 2300000,
+        "image": "https://example.com/vacuum-cleaner.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Laptop Lenovo IdeaPad Slim 5",
+        "category": "elektronik",
+        "price": 9499000,
+        "image": "https://example.com/lenovo-laptop.jpg",
+        "rating": 4.8 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Smartphone Samsung Galaxy S23 Ultra",
+        "category": "elektronik",
+        "price": 14999000,
+        "image": "https://example.com/samsung-s23-ultra.jpg",
+        "rating": 4.9 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Xiaomi Redmi Note 13 Pro",
+        "category": "elektronik",
+        "price": 3599000,
+        "image": "https://example.com/xiaomi-note13.jpg",
+        "rating": 4.6 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Air Fryer Philips HD9215",
+        "category": "elektronik",
+        "price": 1900000,
+        "image": "https://example.com/air-fryer.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Speaker Bluetooth JBL Flip 6",
+        "category": "elektronik",
+        "price": 1799000,
+        "image": "https://example.com/jbl-flip6.jpg",
+        "rating": 4.6 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Kamera Mirrorless Canon EOS R5",
+        "category": "elektronik",
+        "price": 54999000,
+        "image": "https://example.com/canon-eos-r5.jpg",
+        "rating": 4.9 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Drone DJI Mini 3 Pro",
+        "category": "elektronik",
+        "price": 10999000,
+        "image": "https://example.com/dji-mini3-pro.jpg",
+        "rating": 4.8 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "GoPro HERO11 Black",
+        "category": "elektronik",
+        "price": 7499000,
+        "image": "https://example.com/gopro-hero11.jpg",
+        "rating": 4.7 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Monitor Gaming LG UltraGear 27GP950",
+        "category": "elektronik",
+        "price": 8999000,
+        "image": "https://example.com/lg-monitor.jpg",
+        "rating": 4.8 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Printer Inkjet Epson L3250",
+        "category": "elektronik",
+        "price": 2500000,
+        "image": "https://example.com/epson-printer.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Setrika Uap Philips GC518",
+        "category": "elektronik",
+        "price": 1200000,
+        "image": "https://example.com/steam-iron.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Hair Dryer Panasonic EH-ND13",
+        "category": "elektronik",
+        "price": 350000,
+        "image": "https://example.com/hair-dryer.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Mouse Logitech MX Master 3S",
+        "category": "elektronik",
+        "price": 1299000,
+        "image": "https://example.com/logitech-mouse.jpg",
+        "rating": 4.7 [
+            [
+                5
+            ]
+        ]
+    },
+    {
+        "name": "Keyboard Mechanical Rexus Legionare MXIII",
+        "category": "elektronik",
+        "price": 500000,
+        "image": "https://example.com/mechanical-keyboard.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Hana Fashion - Arisha Casual Long Dress",
+        "category": "fashion",
+        "price": 139000,
+        "image": "https://example.com/arisha-long-dress.jpg",
+        "rating": 4.7 [
+            [
+                7
+            ]
+        ]
+    },
+    {
+        "name": "Isla Mia Crop Tanktop Square Neck",
+        "category": "fashion",
+        "price": 59900,
+        "image": "https://example.com/crop-tanktop.jpg",
+        "rating": 4.6 [
+            [
+                9
+            ]
+        ]
+    },
+    {
+        "name": "Classic Button-Up Shirt Vintage Style",
+        "category": "fashion",
+        "price": 125000,
+        "image": "https://example.com/classic-button-up.jpg",
+        "rating": 4.8 [
+            [
+                8
+            ]
+        ]
+    },
+    {
+        "name": "Hana Dress Muslimah Kekinian Motif Polos",
+        "category": "fashion",
+        "price": 150000,
+        "image": "https://example.com/hana-dress.jpg",
+        "rating": 4.5 [
+            [
+                9
+            ]
+        ]
+    },
+    {
+        "name": "Jaket Jeans Oversized Wanita",
+        "category": "fashion",
+        "price": 220000,
+        "image": "https://example.com/jeans-jacket.jpg",
+        "rating": 4.7 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Kemeja Flanel Pria Casual",
+        "category": "fashion",
+        "price": 145000,
+        "image": "https://example.com/flannel-shirt.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Celana Kulot Katun Stretch",
+        "category": "fashion",
+        "price": 110000,
+        "image": "https://example.com/kulot-pants.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Blouse Lace Detail Lengan Panjang",
+        "category": "fashion",
+        "price": 130000,
+        "image": "https://example.com/lace-blouse.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Rok Midi Plisket Polos",
+        "category": "fashion",
+        "price": 95000,
+        "image": "https://example.com/midi-skirt.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Kaos Oversized Unisex",
+        "category": "fashion",
+        "price": 75000,
+        "image": "https://example.com/oversized-tee.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Dress Maxi Bahan Katun Rayon",
+        "category": "fashion",
+        "price": 170000,
+        "image": "https://example.com/maxi-dress.jpg",
+        "rating": 4.8 [
+            [
+                7
+            ]
+        ]
+    },
+    {
+        "name": "Setelan Sporty Crop Top dan Celana Pendek",
+        "category": "fashion",
+        "price": 180000,
+        "image": "https://example.com/sporty-set.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Tunik Embroidery Muslimah",
+        "category": "fashion",
+        "price": 190000,
+        "image": "https://example.com/tunic-embroidery.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Jumpsuit Pendek Overall Wanita",
+        "category": "fashion",
+        "price": 150000,
+        "image": "https://example.com/jumpsuit.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Cardigan Rajut Minimalis",
+        "category": "fashion",
+        "price": 120000,
+        "image": "https://example.com/cardigan.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Scarf Segi Empat Polos",
+        "category": "fashion",
+        "price": 45000,
+        "image": "https://example.com/scarf.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Topi Baseball Cap Bordir",
+        "category": "fashion",
+        "price": 60000,
+        "image": "https://example.com/baseball-cap.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Sling Bag Canvas Minimalis",
+        "category": "fashion",
+        "price": 85000,
+        "image": "https://example.com/sling-bag.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Sepatu Sneakers Casual Wanita",
+        "category": "fashion",
+        "price": 250000,
+        "image": "https://example.com/sneakers.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Anting Hoop Stainless",
+        "category": "fashion",
+        "price": 35000,
+        "image": "https://example.com/hoop-earrings.jpg",
+        "rating": 4.5 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Kalung Layered Minimalis",
+        "category": "fashion",
+        "price": 40000,
+        "image": "https://example.com/layered-necklace.jpg",
+        "rating": 4.6 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Cincin Couple Stainless Steel",
+        "category": "fashion",
+        "price": 75000,
+        "image": "https://example.com/couple-ring.jpg",
+        "rating": 4.4 [
+            [
+                3
+            ]
+        ]
+    },
+    {
+        "name": "Jilbab Instan Syar'i",
+        "category": "fashion",
+        "price": 55000,
+        "image": "https://example.com/instant-hijab.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Pashmina Rawis Wollpeach",
+        "category": "fashion",
+        "price": 65000,
+        "image": "https://example.com/pashmina.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Inner Hijab Ninja Anti Tembem",
+        "category": "fashion",
+        "price": 25000,
+        "image": "https://example.com/inner-hijab.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Gamis Katun Jepang Premium",
+        "category": "fashion",
+        "price": 280000,
+        "image": "https://example.com/japanese-cotton-gamis.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Outer Denim Jaket Pendek",
+        "category": "fashion",
+        "price": 160000,
+        "image": "https://example.com/denim-outer.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Blazer Wanita Formal",
+        "category": "fashion",
+        "price": 210000,
+        "image": "https://example.com/blazer.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Rok Span High Waist",
+        "category": "fashion",
+        "price": 100000,
+        "image": "https://example.com/span-skirt.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Setelan Kaos Couple Keluarga",
+        "category": "fashion",
+        "price": 250000,
+        "image": "https://example.com/family-set.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Dress Pesta Satin Elegan",
+        "category": "fashion",
+        "price": 350000,
+        "image": "https://example.com/satin-dress.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Baju Tidur Set Sutra",
+        "category": "fashion",
+        "price": 180000,
+        "image": "https://example.com/silk-pajama.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Kebaya Modern Brokat",
+        "category": "fashion",
+        "price": 270000,
+        "image": "https://example.com/modern-kebaya.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Jumpsuit Denim Pendek",
+        "category": "fashion",
+        "price": 200000,
+        "image": "https://example.com/denim-jumpsuit.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Celana Jogger Wanita",
+        "category": "fashion",
+        "price": 130000,
+        "image": "https://example.com/jogger-pants.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Dress Batik Modern",
+        "category": "fashion",
+        "price": 220000,
+        "image": "https://example.com/batik-dress.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Tas Ransel Kulit Sintetis",
+        "category": "fashion",
+        "price": 300000,
+        "image": "https://example.com/leather-backpack.jpg",
+        "rating": 4.8
+    },
+    {
+        "name": "Sepatu Loafers Casual Pria",
+        "category": "fashion",
+        "price": 280000,
+        "image": "https://example.com/loafers-shoes.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Topi Bucket Hat Wanita",
+        "category": "fashion",
+        "price": 50000,
+        "image": "https://example.com/bucket-hat.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Sandal Flat Wanita",
+        "category": "fashion",
+        "price": 90000,
+        "image": "https://example.com/flat-sandals.jpg",
+        "rating": 4.4
+    },
+    {
+        "name": "Clutch Bag Pesta",
+        "category": "fashion",
+        "price": 120000,
+        "image": "https://example.com/clutch-bag.jpg",
+        "rating": 4.7
+    },
+    {
+        "name": "Jam Tangan Analog Stainless",
+        "category": "fashion",
+        "price": 150000,
+        "image": "https://example.com/analog-watch.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Kacamata Hitam Polarized",
+        "category": "fashion",
+        "price": 100000,
+        "image": "https://example.com/sunglasses.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Baju Renang Wanita One Piece",
+        "category": "fashion",
+        "price": 170000,
+        "image": "https://example.com/swimsuit.jpg",
+        "rating": 4.7
+    }
 ]
