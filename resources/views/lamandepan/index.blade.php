@@ -7,9 +7,18 @@
 
         <!-- Search Bar dengan Icon -->
         <div class="relative mb-8">
-            <input v-model="searchQuery" placeholder="Cari produk..."
-                class="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            <form action="{{ route('products.search') }}" method="GET">
+                <div class="relative">
+                    <input type="text" name="query" v-model="searchQuery" placeholder="Cari produk..."
+                        class="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value="{{ request('query') }}">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <button type="submit"
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <!-- Kategori dengan Ikon Font Awesome -->
@@ -26,16 +35,18 @@
 
             <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
                 @foreach ($displayCategories as $category)
-                    <div
+                    <a href="{{ route('products.by.category', $category->slug) }}"
                         class="group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-blue-200 cursor-pointer">
                         <div
                             class="w-10 h-10 mb-2 flex items-center justify-center bg-blue-50 rounded-full text-blue-600 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
-                            <img src="storage/{{ $category->icon }}" alt="icon"
+                            <img src="{{ asset('storage/' . $category->icon) }}" alt="icon"
                                 class="w-6 h-6 sm:w-8 sm:h-8 mb-1 object-contain" />
                         </div>
                         <span
-                            class="text-xs text-center font-medium text-gray-700 group-hover:text-blue-600 transition-colors">{{ $category->name }}</span>
-                    </div>
+                            class="text-xs text-center font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
+                            {{ $category->name }}
+                        </span>
+                    </a>
                 @endforeach
             </div>
 

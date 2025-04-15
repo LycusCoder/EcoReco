@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         // Seed transaksi
         $this->call(OrderSeeder::class);
-        $this->call(OrderItemSeeder::class);
+        //$this->call(OrderItemSeeder::class);
         $this->call(RatingSeeder::class);
         $this->call(RecommendationSeeder::class);
     }
