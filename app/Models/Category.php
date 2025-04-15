@@ -13,11 +13,17 @@ class Category extends Model
         'name',
         'slug',
         'icon',
+        'is_active'
     ];
 
     // Relasi ke tabel products
     public function products()
     {
         return $this->hasMany(Product::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
     }
 }

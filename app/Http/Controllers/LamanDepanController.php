@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\AprioriService;
 use App\Models\Product;
+use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Recommendation;
 use App\Models\Testimonial;
@@ -29,8 +31,8 @@ class LamanDepanController extends Controller
         // Mengambil kategori untuk tampilan awal (8 untuk mobile, 16 untuk desktop)
         $displayCategories = \App\Models\Category::take(16)->get();
 
-        // Mengambil semua produk
-        $products = \App\Models\Product::all();
+        // Mengambil semua produk dengan jumlah ulasan (ratings_count)
+        $products = \App\Models\Product::withCount('ratings')->get();
 
         // Mengambil semua testimonial
         $testimonials = \App\Models\Testimonial::all();
@@ -86,13 +88,13 @@ class LamanDepanController extends Controller
                 [
                     'name' => 'Siti Novia Desi Nurkhikmah',
                     'role' => 'Data Analyst',
-                    'image' => 'https://i.pravatar.cc/150?img=4', // foto profil Siti Novia
+                    'image' => 'https://i.pravatar.cc/150?img=5', // foto profil Siti Novia
                     'bio' => 'Ahli analisis data yang mampu menjelajahi pola pembelian pengguna dengan Collaborative Filtering dan Apriori Algorithm. Memastikan rekomendasi produk tetap relevan dan akurat.'
                 ],
                 [
                     'name' => 'Naufal Miftahul Arsyi',
                     'role' => 'DevOps Engineer',
-                    'image' => 'https://i.pravatar.cc/150?img=5', // foto profil Naufal
+                    'image' => 'https://i.pravatar.cc/150?img=4', // foto profil Naufal
                     'bio' => 'Pengembang DevOps yang menjaga sistem berjalan lancar 24/7. Spesialis dalam automasi deployment dan monitoring aplikasi.'
                 ],
                 [
@@ -129,55 +131,6 @@ class LamanDepanController extends Controller
             'categories' => Category::take(16)->get(),
             'allCategories' => Category::all(),
         ]);
-    }
-
-    /**
-     * Mendapatkan produk paling banyak dibeli.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    private function getMostBoughtProducts()
-    {
-        // Menghitung total pembelian setiap produk
-        $mostBoughtProducts = OrderItem::select('product_id', DB::raw('SUM(quantity) as total_quantity'))
-            ->groupBy('product_id')
-            ->orderByDesc('total_quantity')
-            ->limit(3)
-            ->pluck('product_id');
-
-        // Mengambil detail produk berdasarkan ID
-        return Product::whereIn('id', $mostBoughtProducts)->get();
-    }
-
-    /**
-     * Mendapatkan produk rekomendasi
-     */
-    private function getRecommendedProducts()
-    {
-        if (Auth::check()) {
-            return $this->getRecommendedProductsForLoggedInUser();
-        }
-        return $this->getMostBoughtProducts();
-    }
-
-    /**
-     * Mendapatkan rekomendasi produk untuk pengguna yang sudah login.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    private function getRecommendedProductsForLoggedInUser()
-    {
-        // Mengambil ID pengguna saat ini
-        $userId = Auth::id();
-
-        // Mengambil rekomendasi berdasarkan skor tertinggi
-        $recommendedProducts = Recommendation::where('user_id', $userId)
-            ->orderByDesc('score')
-            ->limit(3)
-            ->pluck('product_id');
-
-        // Mengambil detail produk berdasarkan ID
-        return Product::whereIn('id', $recommendedProducts)->get();
     }
 
 
@@ -219,4 +172,110 @@ class LamanDepanController extends Controller
 
         return back()->with('success', 'Thank you for your message! We will get back to you soon.');
     }
+
+
+    /**
+     * Mendapatkan produk paling banyak dibeli.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    private function getMostBoughtProducts()
+    {
+        // Menghitung total pembelian setiap produk
+        $mostBoughtProducts = OrderItem::select('product_id', DB::raw('SUM(quantity) as total_quantity'))
+            ->groupBy('product_id')
+            ->orderByDesc('total_quantity')
+            ->limit(3)
+            ->pluck('product_id');
+
+        // Mengambil detail produk berdasarkan ID
+        return Product::whereIn('id', $mostBoughtProducts)->get();
+    }
+
+    /**
+     * Mendapatkan produk rekomendasi
+     */
+    private function getRecommendedProducts()
+    {
+        if (Auth::check()) {
+            return $this->getRecommendedProductsForLoggedInUser();
+        }
+        return $this->getMostBoughtProducts();
+    }
+
+    /**
+     * Mendapatkan rekomendasi produk untuk pengguna yang sudah login.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    private function getRecommendedProductsForLoggedInUser()
+    {
+        $user = Auth::user();
+        $userId = $user->id;
+
+        // Get user's purchased products
+        $userProductIds = Order::where('user_id', $userId)
+            ->with('orderItems')
+            ->get()
+            ->flatMap(function ($order) {
+                return $order->orderItems->pluck('product_id');
+            })
+            ->unique()
+            ->values()
+            ->toArray();
+
+        if (empty($userProductIds)) {
+            return $this->getMostBoughtProducts();
+        }
+
+        // Get all transactions
+        $transactions = Order::with(['orderItems' => function($query) {
+                $query->select('order_id', 'product_id');
+            }])
+            ->get()
+            ->map(function ($order) {
+                return $order->orderItems->pluck('product_id')->unique()->toArray();
+            })
+            ->toArray();
+
+        // Run Apriori algorithm
+        $apriori = new AprioriService(
+            $transactions,
+            0.1, // Minimum support (adjust as needed)
+            0.5  // Minimum confidence (adjust as needed)
+        );
+
+        $rules = $apriori->run();
+
+        // Generate recommendations
+        $recommendations = [];
+        foreach ($rules as $rule) {
+            $antecedent = $rule['antecedent'];
+            $consequent = $rule['consequent'];
+            $confidence = $rule['confidence'];
+
+            if ($this->isSubset($antecedent, $userProductIds)) {
+                foreach ($consequent as $productId) {
+                    if (!in_array($productId, $userProductIds)) {
+                        $recommendations[$productId] = ($recommendations[$productId] ?? 0) + $confidence;
+                    }
+                }
+            }
+        }
+
+        if (empty($recommendations)) {
+            return $this->getMostBoughtProducts();
+        }
+
+        arsort($recommendations);
+        $recommendedProductIds = array_slice(array_keys($recommendations), 0, 3);
+
+        return Product::whereIn('id', $recommendedProductIds)->get();
+    }
+
+    private function isSubset($needle, $haystack)
+    {
+        return count(array_intersect($needle, $haystack)) === count($needle);
+    }
+
 }

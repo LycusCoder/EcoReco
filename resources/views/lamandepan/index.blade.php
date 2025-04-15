@@ -6,16 +6,16 @@
         @include('components.lamandepan.hero-banner')
 
         <!-- Search Bar dengan Icon -->
-        <div class="relative mb-8">
+        <div class="relative mt-8 mb-8 px-4">
             <form action="{{ route('products.search') }}" method="GET">
                 <div class="relative">
-                    <input type="text" name="query" v-model="searchQuery" placeholder="Cari produk..."
-                        class="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    <input type="text" name="query" placeholder="Cari produk..."
+                        class="w-full pl-12 pr-12 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200 hover:shadow-md"
                         value="{{ request('query') }}">
                     <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                     <button type="submit"
-                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-500 hover:text-blue-700">
-                        <i class="fas fa-arrow-right"></i>
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-200">
+                        <i class="fas fa-arrow-right text-sm"></i>
                     </button>
                 </div>
             </form>

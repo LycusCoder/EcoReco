@@ -17,6 +17,8 @@ class Product extends Model
         'price',
         'image',
         'rating',
+        'stock',
+        'is_active'
     ];
 
     protected $casts = [
@@ -42,6 +44,12 @@ class Product extends Model
         return $this->hasMany(Rating::class);
     }
 
+    // Accessor untuk jumlah ulasan
+    public function getRatingsCountAttribute()
+    {
+        return $this->ratings()->count();
+    }
+
     // Relasi ke tabel recommendations
     public function recommendations()
     {
@@ -52,4 +60,16 @@ class Product extends Model
     {
         return $this->ratings()->avg('rating') ?? 0;
     }
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+
+    // Accessor untuk gambar full URL
+    public function getImageUrlAttribute()
+    {
+        return asset('storage/' . $this->image);
+    }
+
+
 }

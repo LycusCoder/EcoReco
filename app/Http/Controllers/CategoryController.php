@@ -7,16 +7,60 @@ use App\Models\Product;
 
 class CategoryController extends Controller
 {
-    public function show($slug)
-    {
-        $category = Category::where('slug', $slug)->firstOrFail();
 
-        $products = Product::where('category_id', $category->id)
+
+    /**
+     * Menampilkan kategori untuk halaman depan
+     */
+    public function index()
+    {
+        $displayCategories = Category::active()
+            ->orderBy('name')
+            ->take(8)
+            ->get();
+
+        $allCategories = Category::active()
+            ->orderBy('name')
+            ->get();
+
+        return view('your-view-name', compact('displayCategories', 'allCategories'));
+    }
+
+
+    /**
+     * Menampilkan produk berdasarkan kategori
+     */
+    public function showProductsByCategory($slug)
+    {
+        $category = Category::where('slug', $slug)
+            ->active()
+            ->firstOrFail();
+
+        $products = $category->products()
+            ->with('category') // Eager loading
+            ->active()
+            ->orderBy('rating', 'desc') // Sort by rating
             ->paginate(12);
 
-        return view('categories.show', [
-            'category' => $category,
-            'products' => $products
-        ]);
+        return view('products.by-category', compact('category', 'products'));
+    }
+
+    /**
+     * Handle search functionality
+     */
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $products = Product::with('category')
+            ->where(function($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%")
+                ->orWhere('description', 'like', "%{$query}%");
+            })
+            ->active()
+            ->orderBy('rating', 'desc')
+            ->paginate(12);
+
+        return view('products.search-results', compact('products', 'query'));
     }
 }

@@ -1,17 +1,38 @@
 <div
-    class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group">
-    <!-- Badge Diskont -->
-    @if ($product->discount)
-        <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
-            <i class="fas fa-tag mr-1"></i> {{ $product->discount }}% OFF
-        </div>
-    @endif
+    class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group relative">
+    <!-- Badge Diskont & Stok Habis -->
+    <div class="absolute top-3 left-3 flex flex-col space-y-1 z-10">
+        @if ($product->discount)
+            <div class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <i class="fas fa-tag mr-1"></i> {{ $product->discount }}% OFF
+            </div>
+        @endif
+
+        @if ($product->stock <= 0)
+            <div class="bg-gray-600 text-white text-xs font-bold px-2 py-1 rounded">
+                <i class="fas fa-times-circle mr-1"></i> Stok Habis
+            </div>
+        @endif
+    </div>
+
+    @php
+        use Illuminate\Support\Str;
+
+        $imageUrl = '/assets/default-product.jpg';
+        if ($product->image) {
+            $imageUrl = Str::startsWith($product->image, ['http://', 'https://'])
+                ? $product->image
+                : asset('storage/' . $product->image);
+        }
+    @endphp
 
     <!-- Gambar Produk -->
     <a href="{{ route('products.show', $product->slug) }}" class="relative pt-[70%] overflow-hidden block">
-        <img src="{{ $product->image ?? '/assets/default-product.jpg' }}" alt="{{ $product->name }}"
-            class="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{ $imageUrl }}" alt="{{ $product->name }}"
+            class="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy">
     </a>
+
 
     <!-- Informasi Produk -->
     <div class="p-4 flex-grow flex flex-col">
@@ -55,11 +76,12 @@
                             @endif
                         @endfor
                     </div>
-                    <span class="text-gray-500 text-xs ml-1">({{ $product->ratings()->count() }})</span>
+                    <span class="text-gray-500 text-xs ml-1">({{ $product->ratings_count ?? 0 }})</span>
                 </div>
 
                 <button onclick="addToCart({{ $product->id }})"
-                    class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors">
+                    class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors"
+                    {{ $product->stock <= 0 ? 'disabled' : '' }}>
                     <i class="fas fa-shopping-cart text-sm"></i>
                 </button>
             </div>
@@ -70,6 +92,7 @@
 @push('scripts')
     <script>
         function addToCart(productId) {
+            @auth
             fetch('{{ route('cart.add') }}', {
                     method: 'POST',
                     headers: {
@@ -85,21 +108,46 @@
                 .then(data => {
                     if (data.success) {
                         // Update counter keranjang
-                        const cartCount = document.getElementById('cart-count');
-                        if (cartCount) {
-                            cartCount.textContent = data.cart_count;
-                        }
+                        updateCartCount(data.cart_count);
 
-                        // Notifikasi sukses
-                        alert('Produk berhasil ditambahkan ke keranjang!');
+                        // Notifikasi sukses dengan SweetAlert atau Toast
+                        showToast('success', 'Produk berhasil ditambahkan ke keranjang!');
                     } else {
-                        alert('Gagal menambahkan produk ke keranjang: ' + data.message);
+                        showToast('error', data.message || 'Gagal menambahkan produk');
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Terjadi kesalahan saat menambahkan ke keranjang');
+                    showToast('error', 'Terjadi kesalahan saat menambahkan ke keranjang');
                 });
+        @else
+            // Redirect ke login jika belum login
+            window.location.href = '{{ route('login') }}';
+        @endauth
+        }
+
+        function updateCartCount(count) {
+            const cartCountElements = document.querySelectorAll('.cart-count');
+            cartCountElements.forEach(el => {
+                el.textContent = count;
+            });
+        }
+
+        function showToast(type, message) {
+            // Implementasi toast notification
+            // Anda bisa menggunakan library seperti SweetAlert atau Toastify
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            });
+
+            Toast.fire({
+                icon: type,
+                title: message
+            });
         }
     </script>
 @endpush

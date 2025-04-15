@@ -52,7 +52,7 @@ class CheckoutController extends Controller
             // Buat order
             $order = Auth::user()->orders()->create([
                 'total_price' => $request->total,
-                'status' => 'pending',
+                'status' => 'processing', // Ubah dari 'pending' ke 'processing'
                 'shipping_address' => $request->shipping_address,
                 'payment_method' => $request->payment_method,
             ]);
@@ -70,7 +70,8 @@ class CheckoutController extends Controller
             // Kosongkan cart
             session()->forget('cart');
 
-            return redirect()->route('orders.show', $order->id)->with('success', 'Pesanan berhasil dibuat!');
+            return redirect()->route('orders.show', $order->id)
+                ->with('success', 'Pesanan berhasil dibuat! Nomor pesanan: #'.$order->id);
         } catch (\Exception $e) {
             return back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }

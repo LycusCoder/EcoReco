@@ -15,18 +15,32 @@ class OrderSeeder extends Seeder
     {
         $this->command->info("🌱 Seeding orders and order items...");
 
-        // Disable foreign key constraints temporarily
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        Order::truncate();
-        OrderItem::truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
-
-        // Get all users and products
+        // Pastikan ada user dan produk
         $users = User::all();
         $products = Product::all();
 
         if ($users->isEmpty() || $products->isEmpty()) {
-            $this->command->error('Cannot seed orders - no users or products found!');
+            $this->command->error('❌ Cannot seed orders - no users or products found!');
+            return;
+        }
+
+        // Hapus data lama dengan cara aman tergantung DB driver
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::disableForeignKeyConstraints();
+            OrderItem::truncate(); // Child dulu
+            Order::truncate();     // Parent
+            DB::enableForeignKeyConstraints();
+        } else {
+            OrderItem::query()->delete(); // Aman untuk SQLite
+            Order::query()->delete();
+        }
+
+        // Load data alamat dari file JSON
+        $streets = $this->loadJsonArray('indonesia/streets.json');
+        $cities = $this->loadJsonArray('indonesia/cities.json');
+
+        if (empty($streets) || empty($cities)) {
+            $this->command->error("❌ Streets or cities JSON file is missing or invalid.");
             return;
         }
 
@@ -34,20 +48,19 @@ class OrderSeeder extends Seeder
         $statuses = ['pending', 'processing', 'completed', 'cancelled'];
 
         foreach ($users as $user) {
-            $ordersCount = rand(1, 5); // Each user will have 1-5 orders
+            $ordersCount = rand(1, 5); // 1-5 order per user
 
             for ($i = 0; $i < $ordersCount; $i++) {
-                // Create the order
+                // Buat order
                 $order = Order::create([
                     'user_id' => $user->id,
-                    'total_price' => 0, // Will be calculated from items
+                    'total_price' => 0,
                     'status' => $statuses[array_rand($statuses)],
-                    'shipping_address' => $this->generateAddress($user),
+                    'shipping_address' => $this->generateAddress($user, $streets, $cities),
                     'payment_method' => $paymentMethods[array_rand($paymentMethods)],
-                    'created_at' => now()->subDays(rand(0, 30)), // Random date in last 30 days
+                    'created_at' => now()->subDays(rand(0, 30)),
                 ]);
 
-                // Add 1-5 random products to the order
                 $itemsCount = rand(1, 5);
                 $selectedProducts = $products->random($itemsCount);
                 $totalPrice = 0;
@@ -66,24 +79,19 @@ class OrderSeeder extends Seeder
                     $totalPrice += $price * $quantity;
                 }
 
-                // Update order total
                 $order->update(['total_price' => $totalPrice]);
 
-                $this->command->line("<fg=green>✓</> Added order ID: <fg=yellow>{$order->id}</> for user: {$user->email} with {$itemsCount} items (Total: Rp " . number_format($totalPrice, 0) . ")");
+                $this->command->line(
+                    "<fg=green>✓</> Order <fg=yellow>{$order->id}</> created for <fg=blue>{$user->email}</> with <fg=cyan>{$itemsCount}</> items (Total: Rp " . number_format($totalPrice, 0) . ")"
+                );
             }
         }
 
         $this->command->info("✅ Order seeding completed successfully!");
     }
 
-    /**
-     * Generate a fake shipping address
-     */
-    protected function generateAddress($user)
+    protected function generateAddress($user, $streets, $cities)
     {
-        $streets = ['Jl. Merdeka', 'Jl. Sudirman', 'Jl. Thamrin', 'Jl. Gatot Subroto', 'Jl. Hayam Wuruk'];
-        $cities = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Makassar'];
-
         return sprintf(
             "%s No. %d, %s, %s %s",
             $streets[array_rand($streets)],
@@ -92,5 +100,18 @@ class OrderSeeder extends Seeder
             $cities[array_rand($cities)],
             rand(10000, 99999)
         );
+    }
+
+    protected function loadJsonArray($path)
+    {
+        $fullPath = database_path("seeders/data/{$path}");
+        if (!file_exists($fullPath)) {
+            return [];
+        }
+
+        $json = file_get_contents($fullPath);
+        $array = json_decode($json, true);
+
+        return is_array($array) ? $array : [];
     }
 }

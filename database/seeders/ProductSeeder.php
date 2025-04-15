@@ -12,64 +12,57 @@ class ProductSeeder extends Seeder
 {
     public function run()
     {
-        // Path ke file JSON
-        $filePath = base_path('database/seeders/data/products.json');
+        $this->command->info("🌱 Seeding products...");
 
-        // Baca file JSON dan decode ke array
+        $filePath = base_path('database/seeders/data/products.json');
         $jsonData = file_get_contents($filePath);
         $products = json_decode($jsonData, true);
 
-        // Tampilkan pesan awal
-        $this->command->info("🌱 Seeding products...");
-
-        // Loop melalui data produk dan masukkan ke database
         foreach ($products as $product) {
-            // Cari category_id berdasarkan nama kategori
             $categoryId = $this->getCategoryId($product['category']);
-
-            // Jika kategori tidak ditemukan, lewati produk ini
             if (!$categoryId) {
                 $this->command->error("❌ Category not found for product: {$product['name']}. Skipping...");
                 continue;
             }
 
-            // Ambil deskripsi produk dari API atau fallback
             $description = $product['description']
                 ?? $this->getDescriptionFromApi($product['name'])
                 ?? $this->fallbackDescription($product['name']);
 
-            // Masukkan data produk ke database
+            // Translate name (optional) sebelum slug
+            $translatedName = $this->translateToIndonesian($product['name']);
+            $slug = Str::slug($translatedName);
+
             Product::create([
                 'category_id' => $categoryId,
                 'name' => $product['name'],
-                'slug' => Str::slug($product['name']),
+                'slug' => $slug,
                 'description' => $description,
                 'price' => $product['price'],
                 'image' => $product['image'],
+                'stock' => $product['stock'] ?? rand(1, 999),
                 'rating' => $product['rating'] ?? 0.0,
+                'is_active' => true,
             ]);
 
-            // Tampilkan log modern
-            $this->command->line("<fg=green>✓</> Added product: <fg=yellow>{$product['name']}</>");
+            $this->command->line("<fg=green>✓</> Added product: <fg=yellow>{$product['name']}</> (slug: <fg=cyan>{$slug}</>)");
         }
 
-        // Tampilkan pesan sukses
         $this->command->info("✅ Product seeding completed successfully!");
     }
 
     private function getCategoryId($categoryName)
     {
         $category = Category::where('name', $categoryName)->first();
-
-        // Jika kategori tidak ditemukan, tambahkan kategori baru
         if (!$category) {
             $category = Category::create([
                 'name' => $categoryName,
                 'slug' => Str::slug($categoryName),
                 'icon' => '/assets/icons/default.png',
+                'is_active' => true,
             ]);
 
-            $this->command->info("➕ Created new category: <fg=yellow>{$categoryName}</> (ID: {$category->id})");
+            $this->command->info("➕ Created new category: <fg=yellow>{$categoryName}</>");
         }
 
         return $category->id;
@@ -89,36 +82,49 @@ class ProductSeeder extends Seeder
                 }
             }
 
-            $this->command->warn("⚠️ No matching description found in API for: {$productName}");
             return null;
         } catch (\Exception $e) {
-            $this->command->error("❌ Failed to fetch description from API for: {$productName}. Error: {$e->getMessage()}");
+            $this->command->error("❌ API error for {$productName}: {$e->getMessage()}");
             return null;
         }
     }
 
     private function fallbackDescription($productName)
     {
-        // Path ke file JSON
         $filePath = base_path('database/seeders/data/deskripsi_template.json');
+        $templates = json_decode(file_get_contents($filePath), true);
 
-        // Baca file JSON dan decode ke array
-        $jsonData = file_get_contents($filePath);
-        $templates = json_decode($jsonData, true);
-
-        // Jika file JSON tidak valid atau kosong, gunakan fallback default
         if (!$templates || !is_array($templates)) {
-            $this->command->warn("⚠️ Fallback templates not found. Using default description for: {$productName}");
             return "Deskripsi untuk {$productName} belum tersedia.";
         }
 
-        // Pilih template acak
         $template = $templates[array_rand($templates)];
-
-        // Ganti placeholder {productName} dengan nama produk
-        $description = str_replace('{productName}', $productName, $template);
-
-        $this->command->info("📄 Generated fallback description for: <fg=yellow>{$productName}</>");
-        return $description;
+        return str_replace('{productName}', $productName, $template);
     }
+
+    private function translateToIndonesian($name)
+    {
+        $filePath = base_path('database/seeders/data/indonesia/translation_dictionary.json');
+
+        if (!file_exists($filePath)) {
+            $this->command->warn("⚠️ Translation dictionary not found. Using original name.");
+            return $name;
+        }
+
+        $dictionary = json_decode(file_get_contents($filePath), true);
+
+        if (!is_array($dictionary)) {
+            $this->command->warn("⚠️ Translation dictionary is invalid. Using original name.");
+            return $name;
+        }
+
+        foreach ($dictionary as $english => $indo) {
+            if (stripos($name, $english) !== false) {
+                return str_ireplace($english, $indo, $name);
+            }
+        }
+
+        return $name;
+    }
+
 }

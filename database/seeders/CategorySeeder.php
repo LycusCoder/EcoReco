@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Category;
+use Illuminate\Support\Str;
 
 class CategorySeeder extends Seeder
 {
@@ -23,8 +24,9 @@ class CategorySeeder extends Seeder
         foreach ($categories as $category) {
             Category::create([
                 'name' => $category['name'],
-                'slug' => \Str::slug($category['name']), // Generate slug
+                'slug' => Str::slug($category['name']), // Generate slug
                 'icon' => $category['icon'] ?? null, // Icon opsional
+                'is_active' => true, // Semua kategori aktif
             ]);
 
             // Tampilkan log modern

@@ -10,41 +10,43 @@ class TestimonialSeeder extends Seeder
 {
     public function run()
     {
-        // Path ke file JSON
         $filePath = base_path('database/seeders/data/testimonial.json');
 
-        // Baca file JSON dan decode ke array
         $jsonData = file_get_contents($filePath);
         $testimonials = json_decode($jsonData, true);
 
-        // Ambil semua user dari database
         $users = User::all();
 
-        // Tampilkan pesan awal
-        $this->command->info("🌱 Seeding testimonials...");
+        if ($users->isEmpty() || empty($testimonials)) {
+            $this->command->error("❌ No users or testimonial data available.");
+            return;
+        }
 
-        // Loop melalui data testimonial dan masukkan ke database
-        foreach ($testimonials as $testimonial) {
-            // Pilih user secara acak
-            $user = $users->random();
+        $this->command->info("🌱 Seeding testimonials (1 per user)...");
 
-            // Generate random number 3 digit
-            $randomNumber = rand(100, 999);
+        // Ambil user yang belum punya testimonial
+        $availableUsers = $users->reject(function ($user) {
+            return Testimonial::where('user_id', $user->id)->exists();
+        })->shuffle();
 
-            // Generate image URL sesuai format https://i.pravatar.cc/150?img={id}
-            $image = "https://i.pravatar.cc/150?img=" . $user->id . $randomNumber;
+        $testimonialCount = min(count($testimonials), $availableUsers->count());
+
+        for ($i = 0; $i < $testimonialCount; $i++) {
+            $user = $availableUsers[$i];
+            $testimonial = $testimonials[$i];
+
+            // Bikin image URL
+            $image = "https://i.pravatar.cc/150?img=" . ($user->id + rand(100, 999));
 
             Testimonial::create([
                 'user_id' => $user->id,
                 'message' => $testimonial['message'],
-                'image' => $image, // Gunakan URL gambar yang di-generate
+                'image' => $image,
             ]);
 
-            // Tampilkan log modern
-            $this->command->line("<fg=green>✓</> Added testimonial for user ID: <fg=yellow>{$user->id}</> ({$user->email})");
+            $this->command->line("<fg=green>✓</> Testimonial added for <fg=yellow>{$user->email}</>");
         }
 
-        // Tampilkan pesan sukses
-        $this->command->info("✅ Testimonial seeding completed successfully!");
+        $this->command->info("✅ Testimonial seeding completed!");
     }
 }

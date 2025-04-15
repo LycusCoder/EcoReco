@@ -32,4 +32,17 @@ class Order extends Model
     {
         return $this->hasMany(OrderItem::class);
     }
+
+    // Relasi ke tabel products melalui order_items (many-to-many)
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'order_items')
+            ->withPivot('quantity', 'price');
+    }
+
+    // Scope untuk filter pesanan yang sudah selesai
+    public function scopeCompleted($query)
+    {
+        return $query->where('status', 'completed');
+    }
 }

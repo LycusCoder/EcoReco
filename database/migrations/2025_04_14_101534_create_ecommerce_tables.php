@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique(); // 🔥 slug untuk URL
             $table->string('icon')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
 
@@ -26,14 +27,21 @@ return new class extends Migration
             $table->text('description');
             $table->integer('price');
             $table->string('image');
+            $table->integer('stock')->default(0);
             $table->decimal('rating', 3, 1)->default(0.0);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
 
         // TESTIMONIALS
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // Relasi dengan users
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onDelete('cascade'); // Hapus testimonial jika user dihapus
+
+            $table->unique('user_id'); // ⛔ Mencegah duplikat testimonial per user
+
             $table->text('message');
             $table->string('image')->nullable(); // Gambar opsional
             $table->timestamps();
@@ -74,8 +82,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
-            $table->decimal('score', 5, 2); // skor rekomendasi
-            $table->timestamps();
+            $table->decimal('score', 5, 2); // Skor rekomendasi dengan presisi 5 digit dan 2 digit desimal
+            $table->timestamps(); // Membuat created_at dan updated_at
         });
     }
 
