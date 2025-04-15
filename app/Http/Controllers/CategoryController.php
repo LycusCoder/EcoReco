@@ -23,7 +23,7 @@ class CategoryController extends Controller
             ->orderBy('name')
             ->get();
 
-        return view('your-view-name', compact('displayCategories', 'allCategories'));
+        return view('categories.index', compact('displayCategories', 'allCategories'));
     }
 
 
