@@ -10,7 +10,7 @@
                 @foreach($products as $item)
                 <div class="p-4 flex flex-col md:flex-row items-center">
                     <div class="w-full md:w-1/4">
-                        <img src="{{ $item['product']->image ?? '/assets/default-product.jpg' }}"
+                        <img src="{{ $item['product']->image ?? '/assets/default_product.png' }}"
                              alt="{{ $item['product']->name }}"
                              class="w-full h-32 object-cover rounded">
                     </div>

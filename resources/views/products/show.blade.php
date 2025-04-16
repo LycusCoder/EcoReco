@@ -50,11 +50,23 @@
                 <div class="relative pt-[70%] overflow-hidden">
                     @php
                         use Illuminate\Support\Str;
-                        $imageUrl = '/assets/default-product.jpg';
+
+                        // Default image jika kondisi terpenuhi
+                        $imageUrl = asset('/default_product.png');
+
                         if ($product->image) {
-                            $imageUrl = Str::startsWith($product->image, ['http://', 'https://'])
-                                ? $product->image
-                                : asset('storage/' . $product->image);
+                            // Cek apakah URL dimulai dengan https://example
+                            if (Str::startsWith($product->image, 'https://example')) {
+                                $imageUrl = asset('/default_product.png');
+                            }
+                            // Cek apakah URL dimulai dengan http:// atau https:// (selain https://example)
+                            elseif (Str::startsWith($product->image, ['http://', 'https://'])) {
+                                $imageUrl = $product->image;
+                            }
+                            // Jika tidak dimulai dengan http:// atau https://, asumsikan ini adalah path relatif ke storage
+                            else {
+                                $imageUrl = asset('storage/' . $product->image);
+                            }
                         }
                     @endphp
                     <img src="{{ $imageUrl }}" alt="{{ $product->name }}"

@@ -1,44 +1,44 @@
 [
     {
-        "name": "Andi Pratama",
-        "email": "andi.prtm@nourivex.tech",
-        "password": "andi123",
+        "name": "Muhammad Affif",
+        "email": "affif@nourivex.tech",
+        "password": "affif0412",
         "preferences": {
             "theme": "dark",
             "notifications": true
         }
     },
     {
-        "name": "Budi Santoso",
-        "email": "budi.snt@nourivex.tech",
-        "password": "budi456",
+        "name": "Yesa Anggit Prayugo",
+        "email": "yesa@nourivex.tech",
+        "password": "yesa0202",
         "preferences": {
             "theme": "light",
             "notifications": false
         }
     },
     {
-        "name": "Citra Wijaya",
-        "email": "citra.wjy@nourivex.tech",
-        "password": "citra789",
+        "name": "Siti Novia Desi Nurkhikmah",
+        "email": "desi@nourivex.tech",
+        "password": "desi789",
         "preferences": {
             "theme": "dark",
             "notifications": true
         }
     },
     {
-        "name": "Dewi Lestari",
-        "email": "dewi.lst@nourivex.tech",
-        "password": "dewi101",
+        "name": "Naufal Miftahul Arsyi",
+        "email": "arsyi@nourivex.tech",
+        "password": "arsyi101",
         "preferences": {
             "theme": "light",
             "notifications": true
         }
     },
     {
-        "name": "Eko Prasetyo",
-        "email": "eko.prst@nourivex.tech",
-        "password": "eko202",
+        "name": "Imzy Zulijar Setiawan",
+        "email": "imzy@nourivex.tech",
+        "password": "imzy202",
         "preferences": {
             "theme": "dark",
             "notifications": false

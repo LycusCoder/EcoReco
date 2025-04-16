@@ -31,7 +31,7 @@
                     @foreach ($order->orderItems as $item)
                     <div class="py-4 flex items-center">
                         <div class="w-20 h-20 rounded overflow-hidden mr-4">
-                            <img src="{{ $item->product->image ?? '/assets/default-product.jpg' }}"
+                            <img src="{{ $item->product->image ?? '/assets/default_product.png' }}"
                                  alt="{{ $item->product->name }}"
                                  class="w-full h-full object-cover">
                         </div>

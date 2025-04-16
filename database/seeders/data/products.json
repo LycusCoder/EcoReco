@@ -571,77 +571,49 @@
         "category": "elektronik",
         "price": 2699000,
         "image": "https://example.com/aqua-washing-machine.jpg",
-        "rating": 4.7 [
-            [
-                1
-            ]
-        ]
+        "rating": 4.7
     },
     {
         "name": "Mesin Cuci Mini Portable 2 Tabung 8L",
         "category": "elektronik",
         "price": 1200000,
         "image": "https://example.com/mini-washing-machine.jpg",
-        "rating": 4.5 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.5
     },
     {
         "name": "Deli Mesin Penghitung Uang / Money Counter CT990",
         "category": "elektronik",
         "price": 1800000,
         "image": "https://example.com/money-counter.jpg",
-        "rating": 4.6 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Android Box TV Smart 4K",
         "category": "elektronik",
         "price": 550000,
         "image": "https://example.com/android-box.jpg",
-        "rating": 4.4 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.4
     },
     {
         "name": "TV Quantum Dots 55 Inch - AQUA Elektronik",
         "category": "elektronik",
         "price": 12000000,
         "image": "https://example.com/quantum-dot-tv.jpg",
-        "rating": 4.8 [
-            [
-                8
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "Dispenser Air Panas-Dingin Sharp",
         "category": "elektronik",
         "price": 1200000,
         "image": "https://example.com/water-dispenser.jpg",
-        "rating": 4.6 [
-            [
-                4
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Kipas Angin Tower Midea",
         "category": "elektronik",
         "price": 1500000,
         "image": "https://example.com/tower-fan.jpg",
-        "rating": 4.5 [
-            [
-                1
-            ]
-        ]
+        "rating": 4.5
     },
     {
         "name": "Blender Philips HR2118",
@@ -676,33 +648,21 @@
         "category": "elektronik",
         "price": 9499000,
         "image": "https://example.com/lenovo-laptop.jpg",
-        "rating": 4.8 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "Smartphone Samsung Galaxy S23 Ultra",
         "category": "elektronik",
         "price": 14999000,
         "image": "https://example.com/samsung-s23-ultra.jpg",
-        "rating": 4.9 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.9
     },
     {
         "name": "Xiaomi Redmi Note 13 Pro",
         "category": "elektronik",
         "price": 3599000,
         "image": "https://example.com/xiaomi-note13.jpg",
-        "rating": 4.6 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Air Fryer Philips HD9215",
@@ -716,55 +676,35 @@
         "category": "elektronik",
         "price": 1799000,
         "image": "https://example.com/jbl-flip6.jpg",
-        "rating": 4.6 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Kamera Mirrorless Canon EOS R5",
         "category": "elektronik",
         "price": 54999000,
         "image": "https://example.com/canon-eos-r5.jpg",
-        "rating": 4.9 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.9
     },
     {
         "name": "Drone DJI Mini 3 Pro",
         "category": "elektronik",
         "price": 10999000,
         "image": "https://example.com/dji-mini3-pro.jpg",
-        "rating": 4.8 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "GoPro HERO11 Black",
         "category": "elektronik",
         "price": 7499000,
         "image": "https://example.com/gopro-hero11.jpg",
-        "rating": 4.7 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.7
     },
     {
         "name": "Monitor Gaming LG UltraGear 27GP950",
         "category": "elektronik",
         "price": 8999000,
         "image": "https://example.com/lg-monitor.jpg",
-        "rating": 4.8 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "Printer Inkjet Epson L3250",
@@ -792,11 +732,7 @@
         "category": "elektronik",
         "price": 1299000,
         "image": "https://example.com/logitech-mouse.jpg",
-        "rating": 4.7 [
-            [
-                5
-            ]
-        ]
+        "rating": 4.7
     },
     {
         "name": "Keyboard Mechanical Rexus Legionare MXIII",
@@ -810,55 +746,35 @@
         "category": "fashion",
         "price": 139000,
         "image": "https://example.com/arisha-long-dress.jpg",
-        "rating": 4.7 [
-            [
-                7
-            ]
-        ]
+        "rating": 4.7
     },
     {
         "name": "Isla Mia Crop Tanktop Square Neck",
         "category": "fashion",
         "price": 59900,
         "image": "https://example.com/crop-tanktop.jpg",
-        "rating": 4.6 [
-            [
-                9
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Classic Button-Up Shirt Vintage Style",
         "category": "fashion",
         "price": 125000,
         "image": "https://example.com/classic-button-up.jpg",
-        "rating": 4.8 [
-            [
-                8
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "Hana Dress Muslimah Kekinian Motif Polos",
         "category": "fashion",
         "price": 150000,
         "image": "https://example.com/hana-dress.jpg",
-        "rating": 4.5 [
-            [
-                9
-            ]
-        ]
+        "rating": 4.5
     },
     {
         "name": "Jaket Jeans Oversized Wanita",
         "category": "fashion",
         "price": 220000,
         "image": "https://example.com/jeans-jacket.jpg",
-        "rating": 4.7 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.7
     },
     {
         "name": "Kemeja Flanel Pria Casual",
@@ -900,11 +816,7 @@
         "category": "fashion",
         "price": 170000,
         "image": "https://example.com/maxi-dress.jpg",
-        "rating": 4.8 [
-            [
-                7
-            ]
-        ]
+        "rating": 4.8
     },
     {
         "name": "Setelan Sporty Crop Top dan Celana Pendek",
@@ -967,33 +879,21 @@
         "category": "fashion",
         "price": 35000,
         "image": "https://example.com/hoop-earrings.jpg",
-        "rating": 4.5 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.5
     },
     {
         "name": "Kalung Layered Minimalis",
         "category": "fashion",
         "price": 40000,
         "image": "https://example.com/layered-necklace.jpg",
-        "rating": 4.6 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.6
     },
     {
         "name": "Cincin Couple Stainless Steel",
         "category": "fashion",
         "price": 75000,
         "image": "https://example.com/couple-ring.jpg",
-        "rating": 4.4 [
-            [
-                3
-            ]
-        ]
+        "rating": 4.4
     },
     {
         "name": "Jilbab Instan Syar'i",
@@ -1148,5 +1048,264 @@
         "price": 170000,
         "image": "https://example.com/swimsuit.jpg",
         "rating": 4.7
-    }
+    },
+    {
+        "name": "Komik Yugioh! Original Cabutan/Satuan Vol 1 - 32",
+        "category": "komik",
+        "price": 10000,
+        "image": "https://example.com/yugioh-komik.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Buku Komik Hitman Reborn",
+        "category": "komik",
+        "price": 25000,
+        "image": "https://example.com/hitman-reborn.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel Kimchi Confession - Xaviera Putri",
+        "category": "novel",
+        "price": 188000,
+        "image": "https://example.com/kimchi-confession.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Buku Novel : BUNGA MATAHARI",
+        "category": "novel",
+        "price": 102000,
+        "image": "https://example.com/bunga-matahari.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Novel Misteri - Badan Intelijen Sekolah",
+        "category": "novel",
+        "price": 105000,
+        "image": "https://example.com/badan-intelijen-sekolah.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Islami - Pelangiku Warna Ungu",
+        "category": "novel",
+        "price": 37000,
+        "image": "https://example.com/pelangiku-warna-ungu.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel GREAT EXPECTATIONS (Edisi Terbaru)",
+        "category": "novel",
+        "price": 31500,
+        "image": "https://example.com/great-expectations.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Komik Anak Next G : Princess Academy",
+        "category": "komik",
+        "price": 33150,
+        "image": "https://example.com/princess-academy.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Cerita Spesial Doraemon - Pilih Judul",
+        "category": "komik",
+        "price": 35000,
+        "image": "https://example.com/doraemon.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Novel Gamaliel by Geladis Afira",
+        "category": "novel",
+        "price": 34000,
+        "image": "https://example.com/gamaliel.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Remaja Wahai Azarine Wattpad",
+        "category": "novel",
+        "price": 124000,
+        "image": "https://example.com/wahai-azarine.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel Remaja Iridescent Wattpad",
+        "category": "novel",
+        "price": 115000,
+        "image": "https://example.com/iridescent.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Komik Conan Serial Detektif Cabutan Nomor 21-40",
+        "category": "komik",
+        "price": 8000,
+        "image": "https://example.com/conan-detektif.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Komik Love Lies Cabutan - M&C",
+        "category": "komik",
+        "price": 8500,
+        "image": "https://example.com/love-lies.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Novel Indonesia UNTUK SEBUAH PENGABDIAN",
+        "category": "novel",
+        "price": 39500,
+        "image": "https://example.com/untuk-pengabdian.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel Guru Aini Andrea Hirata",
+        "category": "novel",
+        "price": 75000,
+        "image": "https://example.com/guru-aini.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Novel Ilana Tan (Best Seller)",
+        "category": "novel",
+        "price": 71100,
+        "image": "https://example.com/ilana-tan.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Novel Bulan (Best Seller)",
+        "category": "novel",
+        "price": 27000,
+        "image": "https://example.com/novel-bulan.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Hujan (Best Seller)",
+        "category": "novel",
+        "price": 27000,
+        "image": "https://example.com/novel-hujan.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel Bumi (Best Seller)",
+        "category": "novel",
+        "price": 27000,
+        "image": "https://example.com/novel-bumi.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Komik Naruto Shippuden Volume 1",
+        "category": "komik",
+        "price": 25000,
+        "image": "https://example.com/naruto-shippuden.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Novel Laskar Pelangi (Andrea Hirata)",
+        "category": "novel",
+        "price": 95000,
+        "image": "https://example.com/laskar-pelangi.jpg",
+        "rating": 4.9
+      },
+      {
+        "name": "Novel Filosofi Kopi (Dewi Lestari)",
+        "category": "novel",
+        "price": 85000,
+        "image": "https://example.com/filosofi-kopi.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Komik One Piece Volume 1",
+        "category": "komik",
+        "price": 25000,
+        "image": "https://example.com/one-piece.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Novel Supernova - Dea Ananda",
+        "category": "novel",
+        "price": 120000,
+        "image": "https://example.com/supernova.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Komik Dragon Ball Super Volume 1",
+        "category": "komik",
+        "price": 30000,
+        "image": "https://example.com/dragon-ball-super.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Ayat-Ayat Cinta (Habiburrahman El Shirazy)",
+        "category": "novel",
+        "price": 110000,
+        "image": "https://example.com/ayat-ayat-cinta.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Komik Attack on Titan Volume 1",
+        "category": "komik",
+        "price": 35000,
+        "image": "https://example.com/attack-on-titan.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Novel Pudarnya Pesona Cleopatra (Habiburrahman El Shirazy)",
+        "category": "novel",
+        "price": 115000,
+        "image": "https://example.com/pesona-cleopatra.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Komik Detective Conan Volume 1",
+        "category": "komik",
+        "price": 25000,
+        "image": "https://example.com/detective-conan.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Kambing Jantan (Raditya Dika)",
+        "category": "novel",
+        "price": 75000,
+        "image": "https://example.com/kambing-jantan.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Komik My Hero Academia Volume 1",
+        "category": "komik",
+        "price": 30000,
+        "image": "https://example.com/my-hero-academia.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Novel Negeri 5 Menara (Ahmad Fuadi)",
+        "category": "novel",
+        "price": 100000,
+        "image": "https://example.com/negeri-5-menara.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Komik Bleach Volume 1",
+        "category": "komik",
+        "price": 25000,
+        "image": "https://example.com/bleach.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Novel Sang Pemimpi (Andrea Hirata)",
+        "category": "novel",
+        "price": 90000,
+        "image": "https://example.com/sang-pemimpi.jpg",
+        "rating": 4.9
+      },
+      {
+        "name": "Komik Black Clover Volume 1",
+        "category": "komik",
+        "price": 30000,
+        "image": "https://example.com/black-clover.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Novel Tenggelamnya Kapal Van Der Wijck (Hamka)",
+        "category": "novel",
+        "price": 85000,
+        "image": "https://example.com/tenggelamnya-kapal.jpg",
+        "rating": 4.6
+      }
 ]

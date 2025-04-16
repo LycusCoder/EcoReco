@@ -19,12 +19,12 @@
         use Illuminate\Support\Str;
 
         // Default image jika kondisi terpenuhi
-        $imageUrl = asset('/assets/default-product.jpg');
+        $imageUrl = asset('/default_product.png');
 
         if ($product->image) {
             // Cek apakah URL dimulai dengan https://example
             if (Str::startsWith($product->image, 'https://example')) {
-                $imageUrl = asset('/assets/default-product.jpg');
+                $imageUrl = asset('/default_product.png');
             }
             // Cek apakah URL dimulai dengan http:// atau https:// (selain https://example)
             elseif (Str::startsWith($product->image, ['http://', 'https://'])) {

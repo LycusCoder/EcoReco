@@ -6,10 +6,11 @@ use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Support\Str;
-use GuzzleHttp\Client;
 
 class ProductSeeder extends Seeder
 {
+    private $categoryCache = [];
+
     public function run()
     {
         $this->command->info("🌱 Seeding products...");
@@ -19,19 +20,14 @@ class ProductSeeder extends Seeder
         $products = json_decode($jsonData, true);
 
         foreach ($products as $product) {
-            $categoryId = $this->getCategoryId($product['category']);
-            if (!$categoryId) {
-                $this->command->error("❌ Category not found for product: {$product['name']}. Skipping...");
-                continue;
-            }
+            $categoryId = $this->getOrCreateCategoryId($product['category']);
 
             $description = $product['description']
-                ?? $this->getDescriptionFromApi($product['name'])
                 ?? $this->fallbackDescription($product['name']);
 
-            // Translate name (optional) sebelum slug
+            // Translate and generate unique slug
             $translatedName = $this->translateToIndonesian($product['name']);
-            $slug = Str::slug($translatedName);
+            $slug = $this->generateUniqueSlug($translatedName);
 
             Product::create([
                 'category_id' => $categoryId,
@@ -51,42 +47,44 @@ class ProductSeeder extends Seeder
         $this->command->info("✅ Product seeding completed successfully!");
     }
 
-    private function getCategoryId($categoryName)
+    private function getOrCreateCategoryId($categoryName)
     {
-        $category = Category::where('name', $categoryName)->first();
-        if (!$category) {
-            $category = Category::create([
-                'name' => $categoryName,
+        // Cek cache dulu
+        if (isset($this->categoryCache[$categoryName])) {
+            return $this->categoryCache[$categoryName];
+        }
+
+        // Cek database
+        $category = Category::firstOrCreate(
+            ['name' => $categoryName],
+            [
                 'slug' => Str::slug($categoryName),
                 'icon' => '/assets/icons/default.png',
                 'is_active' => true,
-            ]);
+            ]
+        );
 
+        // Simpan ke cache
+        if ($category->wasRecentlyCreated) {
             $this->command->info("➕ Created new category: <fg=yellow>{$categoryName}</>");
         }
 
+        $this->categoryCache[$categoryName] = $category->id;
         return $category->id;
     }
 
-    private function getDescriptionFromApi($productName)
+    private function generateUniqueSlug($name)
     {
-        try {
-            $client = new Client();
-            $response = $client->get("https://fakestoreapi.com/products");
-            $data = json_decode($response->getBody(), true);
+        $baseSlug = Str::slug($name);
+        $slug = $baseSlug;
+        $i = 1;
 
-            foreach ($data as $item) {
-                if (stripos($item['title'], $productName) !== false) {
-                    $this->command->info("🌐 Fetched description from API for: <fg=yellow>{$productName}</>");
-                    return $item['description'];
-                }
-            }
-
-            return null;
-        } catch (\Exception $e) {
-            $this->command->error("❌ API error for {$productName}: {$e->getMessage()}");
-            return null;
+        while (Product::where('slug', $slug)->exists()) {
+            $slug = $baseSlug . '-' . $i;
+            $i++;
         }
+
+        return $slug;
     }
 
     private function fallbackDescription($productName)
@@ -126,5 +124,4 @@ class ProductSeeder extends Seeder
 
         return $name;
     }
-
 }
