@@ -11,8 +11,10 @@ use App\Models\Recommendation;
 use App\Models\Testimonial;
 use App\Models\Category;
 use App\Models\Rating;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 
 
 
@@ -66,6 +68,25 @@ class LamanDepanController extends Controller
      */
     public function about()
     {
+        // Hitung statistik
+        $recommendedProductsCount = Product::whereHas('recommendations')->count();
+        $totalUsers = User::count();
+        $businessPartnersCount = Category::active()->count(); // Sesuaikan dengan model yang tepat
+        $productsSold = OrderItem::whereHas('order', function($query) {
+            $query->completed();
+        })->sum('quantity');
+
+        $stats = Cache::remember('homepage_stats', 3600, function() {
+            return [
+                'recommended_products' => Product::whereHas('recommendations')->count(),
+                'active_users' => User::count(),
+                'business_partners' => Category::active()->count(),
+                'products_sold' => OrderItem::whereHas('order', function($query) {
+                    $query->completed();
+                })->sum('quantity'),
+            ];
+        });
+
         return view('lamandepan.about', [
             'categories' => Category::take(16)->get(),
             'allCategories' => Category::all(),
@@ -104,7 +125,14 @@ class LamanDepanController extends Controller
                     'bio' => 'Tester yang tidak pernah puas sampai semua bug tertangani. Berdedikasi untuk memberikan pengalaman pengguna tanpa cela.'
                 ]
             ],
+            'stats' => [
+                'recommended_products' => $recommendedProductsCount,
+                'active_users' => $totalUsers,
+                'business_partners' => $businessPartnersCount,
+                'products_sold' => $productsSold,
+            ]
         ]);
+
     }
 
     /**

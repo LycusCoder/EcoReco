@@ -9,6 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\StaffDashboardController;
+use App\Http\Controllers\StaffProductController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
@@ -20,14 +22,14 @@ use Illuminate\Support\Facades\Hash;
 */
 Route::get('/', [LamanDepanController::class, 'index'])->name('home');
 Route::get('/testimonials', [LamanDepanController::class, 'testimonials'])->name('testimonials');
-Route::get('/about', [LamanDepanController::class, 'about'])->name('about');
-Route::get('/contact', [LamanDepanController::class, 'contact'])->name('contact');
-Route::post('/contact', [LamanDepanController::class, 'contactSubmit'])->name('contact.submit');
-Route::get('/recommendations', [LamanDepanController::class, 'recommendations'])->name('recommendations');
+Route::get('/tentang', [LamanDepanController::class, 'about'])->name('about');
+Route::get('/kontak', [LamanDepanController::class, 'contact'])->name('contact');
+Route::post('/kontak', [LamanDepanController::class, 'contactSubmit'])->name('contact.submit');
+Route::get('/rekomendasi', [LamanDepanController::class, 'recommendations'])->name('recommendations');
 
 // Product and Category routes
 Route::prefix('products')->group(function () {
-    Route::get('/search', [ProductController::class, 'search'])->name('products.search');
+    Route::get('/pencarian', [ProductController::class, 'search'])->name('products.search');
     Route::get('/{slug}', [ProductController::class, 'show'])->name('products.show');
 });
 
@@ -99,9 +101,9 @@ Route::middleware('auth')->group(function () {
 
     // Profile routes
     Route::prefix('dashboard')->group(function () {
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password.update');
+        Route::get('/profil', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('/profil', [ProfileController::class, 'update'])->name('profile.update');
+        Route::put('/profil/password', [ProfileController::class, 'updatePassword'])->name('profile.password.update');
     });
 
     // Checkout routes
@@ -117,11 +119,31 @@ Route::middleware('auth')->group(function () {
     });
 
     // Product rating route
-    Route::post('/products/{product}/rate', [ProductController::class, 'rate'])->name('products.rate');
+    Route::post('/produk/{product}/rate', [ProductController::class, 'rate'])->name('products.rate');
 });
+
 // Staff Dashboard routes
-Route::middleware(['auth', 'staff'])->group(function () {
-    Route::get('/staff/dashboard', [StaffDashboardController::class, 'index'])->name('staff.dashboard');
+Route::middleware(['auth', 'staff'])->prefix('staff')->group(function () {
+    Route::get('/dashboard', [StaffDashboardController::class, 'index'])->name('staff.dashboard');
+
+    // Tambahan Route
+    Route::get('/orders', [StaffOrderController::class, 'index'])->name('staff.orders');
+    Route::get('/produk', [StaffProductController::class, 'index'])->name('staff.products');
+    Route::get('/testimonials', [StaffTestimonialController::class, 'index'])->name('staff.testimonials');
+
+    // Route untuk CRUD
+    Route::resource('products', StaffProductController::class)->except('show');
+    Route::resource('categories', StaffCategoryController::class)->except('show');
+
+        // Produk Routes
+        Route::resource('products', StaffProductController::class)->names([
+            'index' => 'staff.products.index',
+            'create' => 'staff.products.create',
+            'store' => 'staff.products.store',
+            'edit' => 'staff.products.edit',
+            'update' => 'staff.products.update',
+            'destroy' => 'staff.products.destroy'
+        ]);
 });
 
 /*

@@ -1,4 +1,5 @@
-<header class="bg-white shadow-md w-full sticky top-0 z-40">
+<header class="bg-[#e6f7f9] shadow-md w-full sticky top-0 z-40">
+
     <div class="container mx-auto px-4 py-3">
         <div class="flex items-center justify-between">
             <!-- Logo & Brand -->

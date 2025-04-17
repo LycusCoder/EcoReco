@@ -44,7 +44,7 @@ class TestimonialSeeder extends Seeder
                 'image' => $image,
             ]);
 
-            $this->command->line("<fg=green>✓</> Testimonial added for <fg=yellow>{$user->email}</>");
+            //$this->command->line("<fg=green>✓</> Testimonial added for <fg=yellow>{$user->email}</>");
         }
 
         $this->command->info("✅ Testimonial seeding completed!");

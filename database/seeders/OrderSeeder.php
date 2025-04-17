@@ -81,9 +81,9 @@ class OrderSeeder extends Seeder
 
                 $order->update(['total_price' => $totalPrice]);
 
-                $this->command->line(
-                    "<fg=green>✓</> Order <fg=yellow>{$order->id}</> created for <fg=blue>{$user->email}</> with <fg=cyan>{$itemsCount}</> items (Total: Rp " . number_format($totalPrice, 0) . ")"
-                );
+                //$this->command->line(
+                //    "<fg=green>✓</> Order <fg=yellow>{$order->id}</> created for <fg=blue>{$user->email}</> with <fg=cyan>{$itemsCount}</> items (Total: Rp " . number_format($totalPrice, 0) . ")"
+                //);
             }
         }
 

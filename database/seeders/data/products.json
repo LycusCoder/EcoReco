@@ -1055,257 +1055,1209 @@
         "price": 10000,
         "image": "https://example.com/yugioh-komik.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Buku Komik Hitman Reborn",
         "category": "komik",
         "price": 25000,
         "image": "https://example.com/hitman-reborn.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel Kimchi Confession - Xaviera Putri",
         "category": "novel",
         "price": 188000,
         "image": "https://example.com/kimchi-confession.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Buku Novel : BUNGA MATAHARI",
         "category": "novel",
         "price": 102000,
         "image": "https://example.com/bunga-matahari.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Novel Misteri - Badan Intelijen Sekolah",
         "category": "novel",
         "price": 105000,
         "image": "https://example.com/badan-intelijen-sekolah.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Islami - Pelangiku Warna Ungu",
         "category": "novel",
         "price": 37000,
         "image": "https://example.com/pelangiku-warna-ungu.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel GREAT EXPECTATIONS (Edisi Terbaru)",
         "category": "novel",
         "price": 31500,
         "image": "https://example.com/great-expectations.jpg",
         "rating": 4.4
-      },
-      {
+    },
+    {
         "name": "Komik Anak Next G : Princess Academy",
         "category": "komik",
         "price": 33150,
         "image": "https://example.com/princess-academy.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Cerita Spesial Doraemon - Pilih Judul",
         "category": "komik",
         "price": 35000,
         "image": "https://example.com/doraemon.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Novel Gamaliel by Geladis Afira",
         "category": "novel",
         "price": 34000,
         "image": "https://example.com/gamaliel.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Remaja Wahai Azarine Wattpad",
         "category": "novel",
         "price": 124000,
         "image": "https://example.com/wahai-azarine.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel Remaja Iridescent Wattpad",
         "category": "novel",
         "price": 115000,
         "image": "https://example.com/iridescent.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Komik Conan Serial Detektif Cabutan Nomor 21-40",
         "category": "komik",
         "price": 8000,
         "image": "https://example.com/conan-detektif.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Komik Love Lies Cabutan - M&C",
         "category": "komik",
         "price": 8500,
         "image": "https://example.com/love-lies.jpg",
         "rating": 4.4
-      },
-      {
+    },
+    {
         "name": "Novel Indonesia UNTUK SEBUAH PENGABDIAN",
         "category": "novel",
         "price": 39500,
         "image": "https://example.com/untuk-pengabdian.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel Guru Aini Andrea Hirata",
         "category": "novel",
         "price": 75000,
         "image": "https://example.com/guru-aini.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Novel Ilana Tan (Best Seller)",
         "category": "novel",
         "price": 71100,
         "image": "https://example.com/ilana-tan.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Novel Bulan (Best Seller)",
         "category": "novel",
         "price": 27000,
         "image": "https://example.com/novel-bulan.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Hujan (Best Seller)",
         "category": "novel",
         "price": 27000,
         "image": "https://example.com/novel-hujan.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel Bumi (Best Seller)",
         "category": "novel",
         "price": 27000,
         "image": "https://example.com/novel-bumi.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Komik Naruto Shippuden Volume 1",
         "category": "komik",
         "price": 25000,
         "image": "https://example.com/naruto-shippuden.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Novel Laskar Pelangi (Andrea Hirata)",
         "category": "novel",
         "price": 95000,
         "image": "https://example.com/laskar-pelangi.jpg",
         "rating": 4.9
-      },
-      {
+    },
+    {
         "name": "Novel Filosofi Kopi (Dewi Lestari)",
         "category": "novel",
         "price": 85000,
         "image": "https://example.com/filosofi-kopi.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Komik One Piece Volume 1",
         "category": "komik",
         "price": 25000,
         "image": "https://example.com/one-piece.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Novel Supernova - Dea Ananda",
         "category": "novel",
         "price": 120000,
         "image": "https://example.com/supernova.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Komik Dragon Ball Super Volume 1",
         "category": "komik",
         "price": 30000,
         "image": "https://example.com/dragon-ball-super.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Ayat-Ayat Cinta (Habiburrahman El Shirazy)",
         "category": "novel",
         "price": 110000,
         "image": "https://example.com/ayat-ayat-cinta.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Komik Attack on Titan Volume 1",
         "category": "komik",
         "price": 35000,
         "image": "https://example.com/attack-on-titan.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Novel Pudarnya Pesona Cleopatra (Habiburrahman El Shirazy)",
         "category": "novel",
         "price": 115000,
         "image": "https://example.com/pesona-cleopatra.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Komik Detective Conan Volume 1",
         "category": "komik",
         "price": 25000,
         "image": "https://example.com/detective-conan.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Kambing Jantan (Raditya Dika)",
         "category": "novel",
         "price": 75000,
         "image": "https://example.com/kambing-jantan.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Komik My Hero Academia Volume 1",
         "category": "komik",
         "price": 30000,
         "image": "https://example.com/my-hero-academia.jpg",
         "rating": 4.6
-      },
-      {
+    },
+    {
         "name": "Novel Negeri 5 Menara (Ahmad Fuadi)",
         "category": "novel",
         "price": 100000,
         "image": "https://example.com/negeri-5-menara.jpg",
         "rating": 4.8
-      },
-      {
+    },
+    {
         "name": "Komik Bleach Volume 1",
         "category": "komik",
         "price": 25000,
         "image": "https://example.com/bleach.jpg",
         "rating": 4.7
-      },
-      {
+    },
+    {
         "name": "Novel Sang Pemimpi (Andrea Hirata)",
         "category": "novel",
         "price": 90000,
         "image": "https://example.com/sang-pemimpi.jpg",
         "rating": 4.9
-      },
-      {
+    },
+    {
         "name": "Komik Black Clover Volume 1",
         "category": "komik",
         "price": 30000,
         "image": "https://example.com/black-clover.jpg",
         "rating": 4.5
-      },
-      {
+    },
+    {
         "name": "Novel Tenggelamnya Kapal Van Der Wijck (Hamka)",
         "category": "novel",
         "price": 85000,
         "image": "https://example.com/tenggelamnya-kapal.jpg",
+        "rating": 4.6
+    },
+    {
+        "name": "Charger Handphone Original",
+        "category": "aksesoris_hp",
+        "price": 85000,
+        "image": "https://example.com/charger-handphone.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Kabel Data USB Type-C",
+        "category": "aksesoris_hp",
+        "price": 25000,
+        "image": "https://example.com/kabel-data-type-c.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Flip Cover Samsung Galaxy A Series",
+        "category": "aksesoris_hp",
+        "price": 45000,
+        "image": "https://example.com/flip-cover-samsung.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Hard Case iPhone 15",
+        "category": "aksesoris_hp",
+        "price": 55000,
+        "image": "https://example.com/hard-case-iphone.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "I-Ring Anti Slip untuk HP",
+        "category": "aksesoris_hp",
+        "price": 15000,
+        "image": "https://example.com/i-ring.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Gantungan Handphone Lucu",
+        "category": "aksesoris_hp",
+        "price": 12000,
+        "image": "https://example.com/gantungan-handphone.jpg",
+        "rating": 4.3
+      },
+      {
+        "name": "Holder Handphone Mobil",
+        "category": "aksesoris_hp",
+        "price": 35000,
+        "image": "https://example.com/holder-mobil.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Screen Protector Tempered Glass",
+        "category": "aksesoris_hp",
+        "price": 20000,
+        "image": "https://example.com/tempered-glass.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Charger Mobil Dual Port USB",
+        "category": "aksesoris_hp",
+        "price": 45000,
+        "image": "https://example.com/charger-mobil.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Soft Case Silikon iPhone 14",
+        "category": "aksesoris_hp",
+        "price": 30000,
+        "image": "https://example.com/soft-case-silikon.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Power Bank 10.000mAh",
+        "category": "aksesoris_hp",
+        "price": 150000,
+        "image": "https://example.com/power-bank.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Earphone Bluetooth Wireless",
+        "category": "aksesoris_hp",
+        "price": 120000,
+        "image": "https://example.com/earphone-bluetooth.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Converter Lightning to 3.5mm",
+        "category": "aksesoris_hp",
+        "price": 50000,
+        "image": "https://example.com/converter-lightning.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Baterai Cadangan Handphone",
+        "category": "aksesoris_hp",
+        "price": 100000,
+        "image": "https://example.com/baterai-cadangan.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Dudukan Handphone Meja",
+        "category": "aksesoris_hp",
+        "price": 25000,
+        "image": "https://example.com/dudukan-meja.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Headset Gaming RGB LED",
+        "category": "aksesoris_hp",
+        "price": 200000,
+        "image": "https://example.com/headset-gaming.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Memory Card MicroSD 128GB",
+        "category": "aksesoris_hp",
+        "price": 120000,
+        "image": "https://example.com/microsd.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Anti Gores Full Screen",
+        "category": "aksesoris_hp",
+        "price": 18000,
+        "image": "https://example.com/anti-gores.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Ring Light Portable untuk Selfie",
+        "category": "aksesoris_hp",
+        "price": 65000,
+        "image": "https://example.com/ring-light.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Tripod Mini untuk HP",
+        "category": "aksesoris_hp",
+        "price": 35000,
+        "image": "https://example.com/tripod-mini.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Smartwatch Kompatibel Android",
+        "category": "aksesoris_hp",
+        "price": 350000,
+        "image": "https://example.com/smartwatch.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Kabel Fast Charging 2M",
+        "category": "aksesoris_hp",
+        "price": 30000,
+        "image": "https://example.com/fast-charging.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Case Transparan Anti Shock",
+        "category": "aksesoris_hp",
+        "price": 40000,
+        "image": "https://example.com/case-anti-shock.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Cooling Pad untuk HP Gaming",
+        "category": "aksesoris_hp",
+        "price": 75000,
+        "image": "https://example.com/cooling-pad.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Pop Socket Custom Design",
+        "category": "aksesoris_hp",
+        "price": 20000,
+        "image": "https://example.com/pop-socket.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Samsung Galaxy A14",
+        "category": "handphone",
+        "price": 2299000,
+        "image": "https://example.com/samsung-a14.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Realme C55",
+        "category": "handphone",
+        "price": 1999000,
+        "image": "https://example.com/realme-c55.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "iPhone 15",
+        "category": "handphone",
+        "price": 11599000,
+        "image": "https://example.com/iphone-15.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Xiaomi Redmi Note 13",
+        "category": "handphone",
+        "price": 2999000,
+        "image": "https://example.com/xiaomi-note13.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Oppo A78",
+        "category": "handphone",
+        "price": 3499000,
+        "image": "https://example.com/oppo-a78.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Vivo Y36",
+        "category": "handphone",
+        "price": 3299000,
+        "image": "https://example.com/vivo-y36.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Infinix Zero 30",
+        "category": "handphone",
+        "price": 4299000,
+        "image": "https://example.com/infinix-zero30.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Samsung Galaxy V Second",
+        "category": "handphone_bekas",
+        "price": 174800,
+        "image": "https://example.com/samsung-v-second.jpg",
+        "rating": 4.3
+      },
+      {
+        "name": "iPhone 7 Plus Second",
+        "category": "handphone_bekas",
+        "price": 2500000,
+        "image": "https://example.com/iphone-7-plus-second.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Redmi Note 8 Second",
+        "category": "handphone_bekas",
+        "price": 1200000,
+        "image": "https://example.com/redmi-note8-second.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Paket Bundling HP + Power Bank",
+        "category": "bundling",
+        "price": 2500000,
+        "image": "https://example.com/paket-bundling.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Paket Earphone + Charger",
+        "category": "bundling",
+        "price": 200000,
+        "image": "https://example.com/paket-earphone-charger.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Panci Anti Lengket Set 5pcs",
+        "category": "perlengkapan_rumah",
+        "price": 350000,
+        "image": "https://example.com/panci-anti-lengket.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Wajan Teflon Premium",
+        "category": "perlengkapan_rumah",
+        "price": 200000,
+        "image": "https://example.com/wajan-teflon.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Set Pisau Dapur Stainless Steel",
+        "category": "perlengkapan_rumah",
+        "price": 180000,
+        "image": "https://example.com/set-pisau-dapur.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Blender Philips HR2118",
+        "category": "perlengkapan_rumah",
+        "price": 950000,
+        "image": "https://example.com/blender-philips.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Mixer Tangan Elektrik",
+        "category": "perlengkapan_rumah",
+        "price": 450000,
+        "image": "https://example.com/mixer-tangan.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Teko Listrik 1.5L",
+        "category": "perlengkapan_rumah",
+        "price": 250000,
+        "image": "https://example.com/teko-listrik.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Rice Cooker Cosmos 1.8L",
+        "category": "perlengkapan_rumah",
+        "price": 450000,
+        "image": "https://example.com/rice-cooker-cosmos.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Penggorengan Keramik Non-Stick",
+        "category": "perlengkapan_rumah",
+        "price": 280000,
+        "image": "https://example.com/penggorengan-keramik.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Spatula Set Kayu Alami",
+        "category": "perlengkapan_rumah",
+        "price": 45000,
+        "image": "https://example.com/spatula-set.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Tabung Gas LPG 3kg",
+        "category": "perlengkapan_rumah",
+        "price": 120000,
+        "image": "https://example.com/tabung-gas.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Kompor Gas Portable Mini",
+        "category": "perlengkapan_rumah",
+        "price": 150000,
+        "image": "https://example.com/kompor-portable.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Botol Minum Termos 1L",
+        "category": "perlengkapan_rumah",
+        "price": 120000,
+        "image": "https://example.com/botol-termos.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Talenan Plastik Anti Bakteri",
+        "category": "perlengkapan_rumah",
+        "price": 35000,
+        "image": "https://example.com/talenan-plastik.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Cetakan Kue Silikon",
+        "category": "perlengkapan_rumah",
+        "price": 50000,
+        "image": "https://example.com/cetakan-kue.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Saringan Makanan Stainless",
+        "category": "perlengkapan_rumah",
+        "price": 30000,
+        "image": "https://example.com/saringan-makanan.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Sapu Lidi Tradisional",
+        "category": "perlengkapan_rumah",
+        "price": 18000,
+        "image": "https://example.com/sapu-lidi.jpg",
+        "rating": 4.0
+      },
+      {
+        "name": "Pel Microfiber Set 3pcs",
+        "category": "perlengkapan_rumah",
+        "price": 75000,
+        "image": "https://example.com/pel-microfiber.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Penyedot Debu Portabel",
+        "category": "perlengkapan_rumah",
+        "price": 450000,
+        "image": "https://example.com/penyedot-debu.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Tempat Sampah Otomatis",
+        "category": "perlengkapan_rumah",
+        "price": 250000,
+        "image": "https://example.com/tempat-sampah-otomatis.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Kain Lap Serbaguna",
+        "category": "perlengkapan_rumah",
+        "price": 20000,
+        "image": "https://example.com/kain-lap.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Alat Pel Wiper",
+        "category": "perlengkapan_rumah",
+        "price": 120000,
+        "image": "https://example.com/alat-pel-wiper.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Spray Bottle Pembersih",
+        "category": "perlengkapan_rumah",
+        "price": 35000,
+        "image": "https://example.com/spray-bottle.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Sikat Toilet Handle Panjang",
+        "category": "perlengkapan_rumah",
+        "price": 45000,
+        "image": "https://example.com/sikat-toilet.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Tong Sampah Tempel Dinding",
+        "category": "perlengkapan_rumah",
+        "price": 85000,
+        "image": "https://example.com/tong-sampah-dinding.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Bor Listrik Portabel",
+        "category": "perlengkapan_rumah",
+        "price": 500000,
+        "image": "https://example.com/bor-listrik.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Lampu LED Strip RGB",
+        "category": "perlengkapan_rumah",
+        "price": 150000,
+        "image": "https://example.com/lampu-led-strip.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Karpet Bulu Minimalis",
+        "category": "perlengkapan_rumah",
+        "price": 300000,
+        "image": "https://example.com/karpet-bulu.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Gorden Anti Sinar UV",
+        "category": "perlengkapan_rumah",
+        "price": 250000,
+        "image": "https://example.com/gorden-uv.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Jam Dinding Digital",
+        "category": "perlengkapan_rumah",
+        "price": 120000,
+        "image": "https://example.com/jam-dinding-digital.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Hiasan Dinding Kayu",
+        "category": "perlengkapan_rumah",
+        "price": 85000,
+        "image": "https://example.com/hiasan-dinding-kayu.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Vas Bunga Keramik",
+        "category": "perlengkapan_rumah",
+        "price": 50000,
+        "image": "https://example.com/vas-bunga.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Meja Lipat Serbaguna",
+        "category": "perlengkapan_rumah",
+        "price": 200000,
+        "image": "https://example.com/meja-lipat.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Kursi Lipat Outdoor",
+        "category": "perlengkapan_rumah",
+        "price": 350000,
+        "image": "https://example.com/kursi-lipat-outdoor.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Tempat Lilin Aromaterapi",
+        "category": "perlengkapan_rumah",
+        "price": 45000,
+        "image": "https://example.com/tempat-lilin.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Kotak Penyimpanan Plastik",
+        "category": "perlengkapan_rumah",
+        "price": 65000,
+        "image": "https://example.com/kotak-penyimpanan.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Smart TV LG QNED AI 75 Inch",
+        "category": "elektronik",
+        "price": 24999000,
+        "image": "https://example.com/lg-qned-tv.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Air Fryer Philips HD9215",
+        "category": "elektronik",
+        "price": 1900000,
+        "image": "https://example.com/air-fryer-philips.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Drone DJI Mini 3 Pro",
+        "category": "elektronik",
+        "price": 10999000,
+        "image": "https://example.com/dji-mini3-pro.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Speaker Bluetooth JBL Flip 6",
+        "category": "elektronik",
+        "price": 1799000,
+        "image": "https://example.com/jbl-flip6.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Mouse Logitech MX Master 3S",
+        "category": "elektronik",
+        "price": 1299000,
+        "image": "https://example.com/logitech-mouse.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Keyboard Mechanical Rexus Legionare MXIII",
+        "category": "elektronik",
+        "price": 500000,
+        "image": "https://example.com/mechanical-keyboard.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Kamera Mirrorless Canon EOS R5",
+        "category": "elektronik",
+        "price": 54999000,
+        "image": "https://example.com/canon-eos-r5.jpg",
+        "rating": 4.9
+      },
+      {
+        "name": "Monitor Gaming LG UltraGear 27GP950",
+        "category": "elektronik",
+        "price": 8999000,
+        "image": "https://example.com/lg-monitor.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Printer Inkjet Epson L3250",
+        "category": "elektronik",
+        "price": 2500000,
+        "image": "https://example.com/epson-printer.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Setrika Uap Philips GC518",
+        "category": "elektronik",
+        "price": 1200000,
+        "image": "https://example.com/steam-iron.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Hana Dress Muslimah Kekinian Motif Polos",
+        "category": "fashion",
+        "price": 150000,
+        "image": "https://example.com/hana-dress.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Jaket Jeans Oversized Wanita",
+        "category": "fashion",
+        "price": 220000,
+        "image": "https://example.com/jeans-jacket.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Kemeja Flanel Pria Casual",
+        "category": "fashion",
+        "price": 145000,
+        "image": "https://example.com/flannel-shirt.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Celana Kulot Katun Stretch",
+        "category": "fashion",
+        "price": 110000,
+        "image": "https://example.com/kulot-pants.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Blouse Lace Detail Lengan Panjang",
+        "category": "fashion",
+        "price": 130000,
+        "image": "https://example.com/lace-blouse.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Indomie Goreng Rendang 1 Dus (40 pcs)",
+        "category": "makanan",
+        "price": 175000,
+        "image": "https://example.com/indomie-rendang.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Chitato Rasa Sapi Panggang 65g",
+        "category": "snack",
+        "price": 13500,
+        "image": "https://example.com/chitato-sapi.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "JCO Donuts 1 Box (6 pcs)",
+        "category": "makanan",
+        "price": 79000,
+        "image": "https://example.com/jco-donuts.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Kopi Kapal Api Special Mix 250g",
+        "category": "minuman",
+        "price": 30000,
+        "image": "https://example.com/kopi-kapal-api.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Indomie Bite Mie BBQ Pizza",
+        "category": "makanan_instan",
+        "price": 3500,
+        "image": "https://example.com/indomie-bite-bbq.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Indomie Bite Mie Rumput Laut",
+        "category": "makanan_instan",
+        "price": 3500,
+        "image": "https://example.com/indomie-bite-seaweed.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Indomie Bite Mie Udang Tempura",
+        "category": "makanan_instan",
+        "price": 3500,
+        "image": "https://example.com/indomie-bite-tempura.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Pop Mie Ayam Bawang Cup",
+        "category": "makanan_instan",
+        "price": 8000,
+        "image": "https://example.com/pop-mie-ayam-bawang.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Mie Sedaap Kari Spesial",
+        "category": "makanan_instan",
+        "price": 2800,
+        "image": "https://example.com/mie-sedaap-kari.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Sarimie Goreng Pedas Manis",
+        "category": "makanan_instan",
+        "price": 2500,
+        "image": "https://example.com/sarimie-goreng.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Kuah Bakso Instan Sachet",
+        "category": "makanan_instan",
+        "price": 15000,
+        "image": "https://example.com/kuah-bakso.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Bumbu Rendang Instan",
+        "category": "makanan_instan",
+        "price": 20000,
+        "image": "https://example.com/bumbu-rendang.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Chitato Rasa Sapi Panggang 65g",
+        "category": "snack",
+        "price": 13500,
+        "image": "https://example.com/chitato-sapi.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Taro Chips Keju 70g",
+        "category": "snack",
+        "price": 12000,
+        "image": "https://example.com/taro-keju.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Pop Ice Cokelat 200g",
+        "category": "minuman",
+        "price": 12000,
+        "image": "https://example.com/pop-ice-cokelat.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Pop Ice Strawberry 200g",
+        "category": "minuman",
+        "price": 12000,
+        "image": "https://example.com/pop-ice-strawberry.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Kopi Kapal Api Special Mix 250g",
+        "category": "minuman",
+        "price": 30000,
+        "image": "https://example.com/kopi-kapal-api.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Nescafe Classic 150g",
+        "category": "minuman",
+        "price": 35000,
+        "image": "https://example.com/nescafe-classic.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Teh Pucuk Harum 330ml",
+        "category": "minuman",
+        "price": 4000,
+        "image": "https://example.com/teh-pucuk-harum.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Fruit Tea Melon 350ml",
+        "category": "minuman",
+        "price": 5000,
+        "image": "https://example.com/fruit-tea-melon.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Good Day Cappuccino 25g",
+        "category": "minuman",
+        "price": 2500,
+        "image": "https://example.com/good-day-cappuccino.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Susu Ultra Milk Full Cream 1L",
+        "category": "minuman",
+        "price": 18000,
+        "image": "https://example.com/ultra-milk.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "V-Soy Soya Milk 250ml",
+        "category": "minuman",
+        "price": 10000,
+        "image": "https://example.com/v-soy-soya-milk.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Coca Cola Classic 330ml",
+        "category": "minuman",
+        "price": 6000,
+        "image": "https://example.com/coca-cola.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "SilverQueen Dark Chocolate 150g",
+        "category": "camilan",
+        "price": 25000,
+        "image": "https://example.com/silverqueen-dark.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "Cadbury Dairy Milk 180g",
+        "category": "camilan",
+        "price": 28000,
+        "image": "https://example.com/cadbury-dairy-milk.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Oreo Vanilla Cream 137g",
+        "category": "camilan",
+        "price": 15000,
+        "image": "https://example.com/oreo-vanilla.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Biskuat Choco Crunch 150g",
+        "category": "camilan",
+        "price": 18000,
+        "image": "https://example.com/biskuat-choco.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Chiki Balls Keju 70g",
+        "category": "camilan",
+        "price": 10000,
+        "image": "https://example.com/chiki-balls.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Piatos Jagung Bakar 75g",
+        "category": "camilan",
+        "price": 12000,
+        "image": "https://example.com/piatos-jagung.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Roma Kelapa 135g",
+        "category": "camilan",
+        "price": 15000,
+        "image": "https://example.com/roma-kelapa.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Wafer Tango Cokelat 170g",
+        "category": "camilan",
+        "price": 20000,
+        "image": "https://example.com/wafer-tango.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Astor Cokelat Stick 120g",
+        "category": "camilan",
+        "price": 22000,
+        "image": "https://example.com/astor-cokelat.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Keripik Singkong Balado 100g",
+        "category": "camilan",
+        "price": 15000,
+        "image": "https://example.com/keripik-singkong.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Supermie Ayam Bawang 85g",
+        "category": "makanan_instan",
+        "price": 2500,
+        "image": "https://example.com/supermie-ayam-bawang.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Mie Gelas Soto 60g",
+        "category": "makanan_instan",
+        "price": 2000,
+        "image": "https://example.com/mie-gelas-soto.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Mie Kremez Rasa Ayam Panggang",
+        "category": "makanan_instan",
+        "price": 3000,
+        "image": "https://example.com/mie-kremez-ayam.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Bumbu Rawon Instan 50g",
+        "category": "makanan_instan",
+        "price": 18000,
+        "image": "https://example.com/bumbu-rawon.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Kerupuk Udang Cap Enak 200g",
+        "category": "makanan_instan",
+        "price": 15000,
+        "image": "https://example.com/kerupuk-udang.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Teh Botol Sosro 350ml",
+        "category": "minuman",
+        "price": 5000,
+        "image": "https://example.com/teh-botol-sosro.jpg",
+        "rating": 4.8
+      },
+      {
+        "name": "ABC Juice Mangga 250ml",
+        "category": "minuman",
+        "price": 8000,
+        "image": "https://example.com/abc-juice-mangga.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Yakult 65ml (12 pcs)",
+        "category": "minuman",
+        "price": 25000,
+        "image": "https://example.com/yakult.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Milo UHT 200ml",
+        "category": "minuman",
+        "price": 7000,
+        "image": "https://example.com/milo-uht.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Qtela Rasa Keju 70g",
+        "category": "camilan",
+        "price": 12000,
+        "image": "https://example.com/qtela-keju.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Jetz Sour Cream 60g",
+        "category": "camilan",
+        "price": 10000,
+        "image": "https://example.com/jetz-sour-cream.jpg",
+        "rating": 4.4
+      },
+      {
+        "name": "Hello Panda Chocolate 120g",
+        "category": "camilan",
+        "price": 18000,
+        "image": "https://example.com/hello-panda.jpg",
+        "rating": 4.7
+      },
+      {
+        "name": "Kacang Garuda Pedas 150g",
+        "category": "camilan",
+        "price": 20000,
+        "image": "https://example.com/kacang-garuda.jpg",
+        "rating": 4.6
+      },
+      {
+        "name": "Permen Fox's Candy 100g",
+        "category": "camilan",
+        "price": 15000,
+        "image": "https://example.com/foxs-candy.jpg",
+        "rating": 4.5
+      },
+      {
+        "name": "Pudding Mix Cokelat 200g",
+        "category": "camilan",
+        "price": 12000,
+        "image": "https://example.com/pudding-cokelat.jpg",
         "rating": 4.6
       }
 ]

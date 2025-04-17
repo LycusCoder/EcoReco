@@ -26,22 +26,19 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
 
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,'.$user->id,
-            'phone' => 'nullable|string|max:20',
-            'address' => 'nullable|string|max:500',
+        // Validasi input
+        $validatedData = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'phone' => ['nullable', 'string', 'max:20'],
+            'address' => ['nullable', 'string', 'max:500'],
         ]);
 
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'address' => $request->address,
-        ]);
+        // Pembaruan data pengguna
+        $user->fill($validatedData)->save();
 
         return redirect()->route('profile.edit')
-            ->with('success', 'Profile updated successfully!');
+            ->with('success', 'Profil berhasil diperbarui!');
     }
 
     /**
@@ -54,10 +51,12 @@ class ProfileController extends Controller
             'password' => ['required', Password::defaults(), 'confirmed'],
         ]);
 
-        Auth::user()->update([
+        // Pembaruan password
+        $user = Auth::user();
+        $user->update([
             'password' => Hash::make($request->password),
         ]);
 
-        return back()->with('success', 'Password updated successfully!');
+        return back()->with('success', 'Kata sandi berhasil diperbarui!');
     }
 }
