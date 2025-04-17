@@ -15,31 +15,10 @@
         @endif
     </div>
 
-    @php
-        use Illuminate\Support\Str;
-
-        // Default image jika kondisi terpenuhi
-        $imageUrl = asset('/default_product.png');
-
-        if ($product->image) {
-            // Cek apakah URL dimulai dengan https://example
-            if (Str::startsWith($product->image, 'https://example')) {
-                $imageUrl = asset('/default_product.png');
-            }
-            // Cek apakah URL dimulai dengan http:// atau https:// (selain https://example)
-            elseif (Str::startsWith($product->image, ['http://', 'https://'])) {
-                $imageUrl = $product->image;
-            }
-            // Jika tidak dimulai dengan http:// atau https://, asumsikan ini adalah path relatif ke storage
-            else {
-                $imageUrl = asset('storage/' . $product->image);
-            }
-        }
-    @endphp
 
     <!-- Gambar Produk -->
-    <a href="{{ route('products.show', $product->slug) }}" class="relative pt-[70%] overflow-hidden block">
-        <img src="{{ $imageUrl }}" alt="{{ $product->name }}"
+    <a href="{{ route('products.lihat', $product->slug) }}" class="relative pt-[70%] overflow-hidden block">
+        <img src="{{ $product->image_url }}" alt="{{ $product->name }}"
             class="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy">
     </a>
@@ -48,7 +27,7 @@
     <!-- Informasi Produk -->
     <div class="p-4 flex-grow flex flex-col">
         <!-- Nama dan Kategori -->
-        <a href="{{ route('products.show', $product->slug) }}" class="hover:text-blue-600 transition-colors">
+        <a href="{{ route('products.lihat', $product->slug) }}" class="hover:text-blue-600 transition-colors">
             <h3 class="font-semibold text-gray-800 text-lg mb-1 line-clamp-2">{{ $product->name }}</h3>
         </a>
         <p class="text-gray-500 text-sm mb-3">

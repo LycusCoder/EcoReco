@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        .bg-primary { background-color: #38bdf8; }
-        .bg-secondary { background-color: #22c55e; }
-        .bg-tech { background-color: #f0f4f8; }
+        .bg-primary {
+            background-color: #38bdf8;
+        }
+
+        .bg-secondary {
+            background-color: #22c55e;
+        }
+
+        .bg-tech {
+            background-color: #f0f4f8;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -50,13 +58,13 @@
                 <!-- Tabs Produk -->
                 <div class="mt-6 px-2">
                     <a href="{{ route('staff.products.index') }}"
-                       class="flex items-center px-6 py-3 text-sm text-white hover:bg-gray-700
+                        class="flex items-center px-6 py-3 text-sm text-white hover:bg-gray-700
                               {{ request()->routeIs('staff.products.*') ? 'bg-gray-700 border-l-4 border-green-400' : '' }}">
                         <i class="fas fa-box-open mr-3 text-green-400"></i>
                         Lihat Produk
                     </a>
                     <a href="{{ route('staff.products.create') }}"
-                       class="flex items-center px-6 py-3 text-sm text-white hover:bg-gray-700">
+                        class="flex items-center px-6 py-3 text-sm text-white hover:bg-gray-700">
                         <i class="fas fa-plus-circle mr-3 text-green-400"></i>
                         Tambah Produk
                     </a>
@@ -88,12 +96,14 @@
                                 <span class="mr-2">{{ Auth::user()->name }}</span>
                                 <i class="fas fa-user-circle text-xl"></i>
                             </button>
-                            <div class="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-48 mt-2">
+                            <div
+                                class="absolute right-0 hidden group-hover:block bg-white shadow-lg rounded-lg w-48 mt-2">
                                 <a href="#" class="block px-4 py-3 text-gray-800 hover:bg-gray-100">Profil</a>
                                 <a href="#" class="block px-4 py-3 text-gray-800 hover:bg-gray-100">Pengaturan</a>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit" class="w-full text-left px-4 py-3 text-red-600 hover:bg-gray-100">
+                                    <button type="submit"
+                                        class="w-full text-left px-4 py-3 text-red-600 hover:bg-gray-100">
                                         Logout
                                     </button>
                                 </form>
@@ -143,7 +153,8 @@
                         <div class="flex items-center justify-between">
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-800">Penjualan</h3>
-                                <p class="text-2xl font-bold text-primary mt-2">Rp {{ number_format($monthlySales) }}</p>
+                                <p class="text-2xl font-bold text-primary mt-2">Rp {{ number_format($monthlySales) }}
+                                </p>
                             </div>
                             <div class="bg-purple-100 p-4 rounded-full">
                                 <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
@@ -154,6 +165,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Flash Messages -->
+                @include('components.layouts.flash-messages')
 
                 @yield('content')
             </main>
@@ -169,4 +183,5 @@
         });
     </script>
 </body>
+
 </html>

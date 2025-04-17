@@ -36,13 +36,23 @@ class LamanDepanController extends Controller
         // Mengambil semua produk dengan jumlah ulasan (ratings_count)
         $products = \App\Models\Product::withCount('ratings')->get();
 
-        // Mengambil semua testimonial
-        $testimonials = \App\Models\Testimonial::all();
+        // Mengambil semua testimonial beserta user
+        $testimonials = \App\Models\Testimonial::with('user')->get();
 
         // Menambah gambar dinamis ke setiap testimonial
         foreach ($testimonials as $testimonial) {
-            $testimonial->image = "https://i.pravatar.cc/150?img=" . ($testimonial->user_id ?? random_int(1, 999));
+            if ($testimonial->user && $testimonial->user->avatar && $testimonial->user->avatar !== 'default_avatar.png') {
+                // Jika user punya avatar dan avatar-nya BUKAN 'default_avatar.png'
+                $testimonial->image = asset('storage/avatars/' . $testimonial->user->avatar);
+            } elseif ($testimonial->user && $testimonial->user->avatar === 'default_avatar.png') {
+                // Jika avatar-nya adalah 'default_avatar.png'
+                $testimonial->image = asset('default_avatar.png'); // atau path lain sesuai lokasi file kamu
+            } else {
+                // Kalau tidak ada user atau avatar
+                $testimonial->image = "https://i.pravatar.cc/150?img=" . ($testimonial->user_id ?? random_int(1, 999));
+            }
         }
+
 
         // Cek apakah pengguna sudah login
         if (Auth::check()) {

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -65,11 +66,22 @@ class Product extends Model
         return $query->where('is_active', true);
     }
 
-    // Accessor untuk gambar full URL
-    public function getImageUrlAttribute()
-    {
-        return asset('storage/' . $this->image);
-    }
+
+     // Accessor untuk image URL
+     public function getImageUrlAttribute()
+     {
+         if (!$this->image) {
+             return asset('/default_product.png');
+         }
+
+         if (Str::startsWith($this->image, 'https://example')) {
+             return asset('/default_product.png');
+         } elseif (Str::startsWith($this->image, ['http://', 'https://'])) {
+             return $this->image;
+         } else {
+             return asset('storage/' . $this->image);
+         }
+     }
 
 
 }

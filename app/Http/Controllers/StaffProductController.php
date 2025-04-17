@@ -78,48 +78,131 @@ class StaffProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('dashboard.staff.products.create', compact('categories'));
+
+        $monthlySales = Order::where('status', 'completed')
+        ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
+        ->sum('total_price');
+
+        $newProductsCount = $dailyStats['products'] ?? 0;
+        $newOrdersCount = $dailyStats['orders'] ?? 0;
+
+        $totalProducts = Cache::remember('total_products', 3600, function () {
+            return Product::count();
+        });
+
+        $monthlyProducts = Cache::remember('monthly_products', 3600, function () {
+            return Product::whereBetween('created_at', [
+                now()->startOfMonth(),
+                now()->endOfMonth(),
+            ])->count();
+        });
+
+        return view('dashboard.staff.products.create', compact('categories',  'totalProducts',
+        'newProductsCount',
+        'newOrdersCount',
+        'monthlySales',
+        'monthlyProducts'));
     }
+
+
 
     public function store(Request $request)
     {
-        // Validasi & simpan produk baru (lengkapi sesuai kebutuhan)
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required',
             'stock' => 'required|integer|min:0',
-            'image' => 'nullable|string',
-            'is_active' => 'boolean',
+            'description' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // Bersihkan format harga (hapus titik)
+        $validated['price'] = (int) str_replace('.', '', $validated['price']);
+
+        // Tambahkan slug otomatis
+        $validated['slug'] = Str::slug($validated['name']);
+
+        // Status produk default aktif
+        $validated['is_active'] = true;
+
+        // Simpan gambar jika ada
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('products', 'public');
+            $validated['image'] = $path;
+        }
+
+        // Simpan produk ke database
         Product::create($validated);
 
-        return redirect()->route('staff.products.index')->with('success', 'Produk berhasil ditambahkan.');
+        return redirect()->route('staff.products.index')->with('success', 'Produk berhasil ditambahkan!');
     }
+
+
 
     public function edit(Product $product)
     {
         $categories = Category::all();
-        return view('dashboard.staff.products.edit', compact('product', 'categories'));
+
+
+
+        $monthlySales = Order::where('status', 'completed')
+            ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
+            ->sum('total_price');
+
+        $newProductsCount = $dailyStats['products'] ?? 0;
+        $newOrdersCount = $dailyStats['orders'] ?? 0;
+
+        $totalProducts = Cache::remember('total_products', 3600, function () {
+            return Product::count();
+        });
+
+        $monthlyProducts = Cache::remember('monthly_products', 3600, function () {
+            return Product::whereBetween('created_at', [
+                now()->startOfMonth(),
+                now()->endOfMonth(),
+            ])->count();
+        });
+
+
+        return view('dashboard.staff.products.edit', compact('product', 'totalProducts', 'monthlyProducts',
+        'newProductsCount',
+        'newOrdersCount','categories',
+            'monthlySales',
+            'monthlyProducts'));
     }
+
 
     public function update(Request $request, Product $product)
     {
-        // Validasi & update produk (lengkapi sesuai kebutuhan)
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required|integer|min:0',
             'stock' => 'required|integer|min:0',
-            'image' => 'nullable|string',
-            'is_active' => 'boolean',
+            'image' => 'nullable|mimes:jpeg,png,jpg,gif|max:2048', // Max 2MB
+        ]);
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('products', 'public');
+            $validated['image'] = $imagePath; // <-- GANTI ke image BUKAN image_url
+        }
+
+        $validated['is_active'] = $request->has('is_active');
+
+        Log::info('Updating product', [
+            'product_id' => $product->id,
+            'data' => $validated,
         ]);
 
         $product->update($validated);
 
-        return redirect()->route('staff.products.index')->with('success', 'Produk berhasil diperbarui.');
+        return redirect()->route('staff.products.edit', $product->id)
+            ->with('success', 'Produk berhasil diperbarui.');
     }
+
+
+
 
     public function destroy(Product $product)
     {

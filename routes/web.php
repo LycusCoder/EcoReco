@@ -30,7 +30,7 @@ Route::get('/rekomendasi', [LamanDepanController::class, 'recommendations'])->na
 // Product and Category routes
 Route::prefix('products')->group(function () {
     Route::get('/pencarian', [ProductController::class, 'search'])->name('products.search');
-    Route::get('/{slug}', [ProductController::class, 'show'])->name('products.show');
+    Route::get('/{slug}', [ProductController::class, 'show'])->name('products.lihat');
 });
 
 Route::prefix('categories')->group(function () {
