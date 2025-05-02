@@ -24,3 +24,12 @@
 .group:hover .group-hover\:scale-105 {
     transform: scale(1.05);
 }
+
+
+/* Di file CSS */
+.product-card {
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}

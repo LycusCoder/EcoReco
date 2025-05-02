@@ -1,0 +1,14 @@
+{
+    "pagination": {
+        "previous": "&laquo; Sebelumnya",
+        "next": "Selanjutnya &raquo;",
+        "page_link": "<span class=\"sr-only\">Halaman </span><span aria-current=\"page\">{{page}}</span>",
+        "first_page": "Halaman Pertama",
+        "last_page": "Halaman Terakhir",
+        "view_all": "Lihat Semua",
+        "to": "ke",
+        "of": "dari",
+        "through": "hingga",
+        "results": "hasil"
+    }
+}

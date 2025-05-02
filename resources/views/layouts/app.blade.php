@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,7 @@
     <!-- Additional styles -->
     @stack('styles')
 </head>
+
 <body class="min-h-screen flex flex-col bg-gray-50 antialiased text-gray-800">
     <!-- Skip to content link for accessibility -->
     <a href="#main-content"
@@ -67,8 +69,17 @@
                 document.getElementById('menu-toggle').querySelector('i').classList.add('fa-bars');
             });
         });
+
+        function showMaintenanceAlert() {
+            document.getElementById('maintenanceModal').classList.remove('hidden');
+        }
     </script>
+
+    <!-- Maintenance Alert Modal -->
+    @include('components.maintenance-modal')
+
     <!-- Additional scripts -->
     @stack('scripts')
 </body>
+
 </html>

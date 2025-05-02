@@ -24,7 +24,7 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-                    <a href="/products" class="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl group">
+                    <a href="{{ route('products.search') }}?recommended=true" class="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl group">
                         <span class="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 group-hover:bg-white/10 group-hover:skew-x-0"></span>
                         <span class="absolute bottom-0 right-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 skew-x-12 group-hover:bg-white/10 group-hover:skew-x-0"></span>
                         <span class="relative flex items-center">
