@@ -200,7 +200,7 @@ Jika ada pertanyaan atau masukan, silakan hubungi:
 
 - 👨‍💻 [Muhammad Affif]: affif@nourivex.tech
 - 🌟 [Yesa Anggit Prayugo]: email@example.com
-- 📝 [Siti Novia Desi Nurkhikmah]: email@example.com
+- 📝 [Siti Novia Desi Nurkhikmah]: sitinoviadesi@gmail.com
 - 🚀 [Naufal Miftahul Arsyij]: arsyinaufal12@gmail.com
 - 🎉 [Imzy Zulijar Setiawan]: email@example.com
 
