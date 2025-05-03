@@ -1,32 +1,38 @@
 # Sistem Rekomendasi Produk E-Commerce Berbasis Pola Pembelian Pengguna
 
 ## Tentang Proyek
+
 Sistem ini dirancang untuk merekomendasikan produk kepada pelanggan berdasarkan riwayat pembelian dan preferensi pengguna. Proyek ini menggunakan dua algoritma utama:
-- **Collaborative Filtering**: Untuk menemukan kesamaan antar pengguna dan merekomendasikan produk yang relevan.
-- **Apriori Algorithm**: Untuk menemukan pola pembelian yang sering terjadi dalam transaksi e-commerce.
+
+-   **Collaborative Filtering**: Untuk menemukan kesamaan antar pengguna dan merekomendasikan produk yang relevan.
+-   **Apriori Algorithm**: Untuk menemukan pola pembelian yang sering terjadi dalam transaksi e-commerce.
 
 Aplikasi ini dibangun menggunakan framework **Laravel** dengan front-end menggunakan **Blade Template Engine**.
 
 ## Tujuan Proyek
-- Meningkatkan pengalaman belanja online dengan memberikan rekomendasi produk yang relevan.
-- Memperkuat analisis data pembelian untuk meningkatkan penjualan.
-- Mengimplementasikan algoritma Collaborative Filtering dan Apriori Algorithm secara efektif.
+
+-   Meningkatkan pengalaman belanja online dengan memberikan rekomendasi produk yang relevan.
+-   Memperkuat analisis data pembelian untuk meningkatkan penjualan.
+-   Mengimplementasikan algoritma Collaborative Filtering dan Apriori Algorithm secara efektif.
 
 ## Fitur Utama
-- Rekomendasi produk berdasarkan riwayat pembelian.
-- Analisis pola pembelian menggunakan Apriori Algorithm.
-- Antarmuka pengguna yang intuitif untuk melihat rekomendasi.
+
+-   Rekomendasi produk berdasarkan riwayat pembelian.
+-   Analisis pola pembelian menggunakan Apriori Algorithm.
+-   Antarmuka pengguna yang intuitif untuk melihat rekomendasi.
 
 ## Teknologi yang Digunakan
-- **Backend**: Laravel
-- **Frontend**: Blade Template Engine
-- **Database**: MySQL (atau database lain yang digunakan)
-- **Libraries**: 
-  - PHP Libraries untuk Collaborative Filtering dan Apriori Algorithm
-  - Laravel Framework
-- **Dependencies**: Lihat file `composer.json`
+
+-   **Backend**: Laravel
+-   **Frontend**: Blade Template Engine
+-   **Database**: MySQL (atau database lain yang digunakan)
+-   **Libraries**:
+    -   PHP Libraries untuk Collaborative Filtering dan Apriori Algorithm
+    -   Laravel Framework
+-   **Dependencies**: Lihat file `composer.json`
 
 ## Struktur Direktori
+
 ```
 .
 |-- app
@@ -145,64 +151,74 @@ Aplikasi ini dibangun menggunakan framework **Laravel** dengan front-end menggun
 ```
 
 ## Cara Menjalankan Proyek
+
 1. **Clone Repository**:
-   ```bash
-   git clone https://github.com/LycusCoder/Sistem-Rekomendasi-Produk-E-Commerce.git
-   cd Sistem-Rekomendasi-Produk-E-Commerce
-   ```
+
+    ```bash
+    git clone https://github.com/LycusCoder/Sistem-Rekomendasi-Produk-E-Commerce.git
+    cd Sistem-Rekomendasi-Produk-E-Commerce
+    ```
 
 2. **Install Dependencies**:
-   ```bash
-   composer install
-   npm install (Wajib Ingat)
-   ```
+
+    ```bash
+    composer install
+    npm install (Wajib Ingat)
+    ```
 
 3. **Konfigurasi Database**:
-   - Salin file `.env.example` menjadi `.env`:
-     ```bash
-     cp .env.example .env
-     ```
-   - Edit file `.env` untuk mengatur koneksi database:
-     ```
-     DB_CONNECTION=mysql
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_DATABASE=sistem_rekomendasi
-     DB_USERNAME=root
-     DB_PASSWORD=
-     ```
+
+    - Salin file `.env.example` menjadi `.env`:
+        ```bash
+        cp .env.example .env
+        ```
+    - Edit file `.env` untuk mengatur koneksi database:
+        ```
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=sistem_rekomendasi
+        DB_USERNAME=root
+        DB_PASSWORD=
+        ```
 
 4. **Migrasi Database**:
-   ```bash
-   php artisan migrate
-   ```
+
+    ```bash
+    php artisan migrate
+    ```
 
 5. **Seed Data (Jika Ada)**:
-   ```bash
-   php artisan db:seed
-   ```
+
+    ```bash
+    php artisan db:seed
+    ```
 
 6. **Jalankan Server Laravel**:
-   ```bash
-   php artisan serve
-   ```
-   - Aplikasi akan berjalan di `http://127.0.0.1:8000`.
+
+    ```bash
+    php artisan serve
+    ```
+
+    - Aplikasi akan berjalan di `http://127.0.0.1:8000`.
 
 7. **Hasil**:
-   - Akses halaman rekomendasi produk dan analisis pola pembelian melalui antarmuka web.
+    - Akses halaman rekomendasi produk dan analisis pola pembelian melalui antarmuka web.
 
 ## Kontribusi
+
 Kami menerima kontribusi dari siapa pun! Jika Anda ingin berkontribusi, silakan buka issue atau pull request.
 
 ## Kontak
 
 Jika ada pertanyaan atau masukan, silakan hubungi:
 
-- 👨‍💻 [Muhammad Affif]: affif@nourivex.tech
-- 🌟 [Yesa Anggit Prayugo]: email@example.com
-- 📝 [Siti Novia Desi Nurkhikmah]: sitinoviadesi@gmail.com
-- 🚀 [Naufal Miftahul Arsyij]: arsyinaufal12@gmail.com
-- 🎉 [Imzy Zulijar Setiawan]: email@example.com
+-   👨‍💻 [Muhammad Affif]: affif@nourivex.tech
+-   🌟 [Yesa Anggit Prayugo]: yesaprayugo4@gmail.com
+-   📝 [Siti Novia Desi Nurkhikmah]: sitinoviadesi@gmail.com
+-   🚀 [Naufal Miftahul Arsyij]: arsyinaufal12@gmail.com
+-   🎉 [Imzy Zulijar Setiawan]: imzyzulijar01@gmail.com
 
 ## Lisensi
+
 Proyek ini dibuat di bawah lisensi [MIT License](LICENSE).
