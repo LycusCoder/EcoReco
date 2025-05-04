@@ -1,224 +1,143 @@
-# Sistem Rekomendasi Produk E-Commerce Berbasis Pola Pembelian Pengguna
+# 🛍️ Sistem Rekomendasi Produk E-Commerce Berbasis Pola Pembelian Pengguna
 
-## Tentang Proyek
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/username/repo/issues)
+![GitHub last commit](https://img.shields.io/github/last-commit/username/repo)
 
-Sistem ini dirancang untuk merekomendasikan produk kepada pelanggan berdasarkan riwayat pembelian dan preferensi pengguna. Proyek ini menggunakan dua algoritma utama:
+Sistem rekomendasi produk berbasis pola pembelian pengguna menggunakan pendekatan modern dengan dua algoritma utama: **Collaborative Filtering** dan **Apriori Algorithm**. Proyek ini bertujuan untuk memberikan rekomendasi personalisasi kepada pelanggan berdasarkan riwayat pembelian mereka.
 
--   **Collaborative Filtering**: Untuk menemukan kesamaan antar pengguna dan merekomendasikan produk yang relevan.
--   **Apriori Algorithm**: Untuk menemukan pola pembelian yang sering terjadi dalam transaksi e-commerce.
+Dibangun dengan teknologi Laravel dan Blade Template Engine, sistem ini cocok digunakan dalam platform e-commerce yang ingin meningkatkan pengalaman belanja serta efisiensi pemasaran.
 
-Aplikasi ini dibangun menggunakan framework **Laravel** dengan front-end menggunakan **Blade Template Engine**.
+---
 
-## Tujuan Proyek
+## 🎯 Tujuan Proyek
 
--   Meningkatkan pengalaman belanja online dengan memberikan rekomendasi produk yang relevan.
--   Memperkuat analisis data pembelian untuk meningkatkan penjualan.
--   Mengimplementasikan algoritma Collaborative Filtering dan Apriori Algorithm secara efektif.
+- Meningkatkan pengalaman belanja online dengan rekomendasi produk yang relevan.
+- Memperkuat analisis data pembelian untuk strategi bisnis yang lebih baik.
+- Mengimplementasikan algoritma Collaborative Filtering dan Apriori secara akurat dan efektif.
 
-## Fitur Utama
+---
 
--   Rekomendasi produk berdasarkan riwayat pembelian.
--   Analisis pola pembelian menggunakan Apriori Algorithm.
--   Antarmuka pengguna yang intuitif untuk melihat rekomendasi.
+## 🔧 Teknologi yang Digunakan
 
-## Teknologi yang Digunakan
+| Komponen       | Teknologi                |
+|----------------|--------------------------|
+| **Backend**    | Laravel 10+              |
+| **Frontend**   | Blade Template Engine    |
+| **Database**   | MySQL (dapat disesuaikan)|
+| **Algoritma**  | Collaborative Filtering, Apriori Algorithm |
+| **Tools**      | Composer, NPM, Vite, PHP 8+ |
 
--   **Backend**: Laravel
--   **Frontend**: Blade Template Engine
--   **Database**: MySQL (atau database lain yang digunakan)
--   **Libraries**:
-    -   PHP Libraries untuk Collaborative Filtering dan Apriori Algorithm
-    -   Laravel Framework
--   **Dependencies**: Lihat file `composer.json`
+---
 
-## Struktur Direktori
+## 📦 Fitur Utama
 
-```
-.
-|-- app
-|   |-- Http
-|   |   `-- Controllers
-|   |       |-- AuthController.php
-|   |       |-- Controller.php
-|   |       |-- DashboardController.php
-|   |       `-- LamanDepanController.php
-|   |-- Models
-|   |   |-- Category.php
-|   |   |-- Order.php
-|   |   |-- OrderItem.php
-|   |   |-- Product.php
-|   |   |-- Rating.php
-|   |   |-- Recommendation.php
-|   |   |-- Testimonial.php
-|   |   `-- User.php
-|   |-- Observers
-|   |   `-- RatingObserver.php
-|   `-- Providers
-|       `-- AppServiceProvider.php
-|-- bootstrap
-|   |-- cache
-|   |   |-- packages.php
-|   |   `-- services.php
-|   |-- app.php
-|   `-- providers.php
-|-- config
-|   |-- app.php
-|   |-- auth.php
-|   |-- cache.php
-|   |-- database.php
-|   |-- filesystems.php
-|   |-- logging.php
-|   |-- mail.php
-|   |-- queue.php
-|   |-- services.php
-|   `-- session.php
-|-- database
-|   |-- factories
-|   |   `-- UserFactory.php
-|   |-- migrations
-|   |   |-- 0001_01_01_000000_create_users_table.php
-|   |   |-- 0001_01_01_000001_create_cache_table.php
-|   |   |-- 0001_01_01_000002_create_jobs_table.php
-|   |   `-- 2025_04_14_101534_create_ecommerce_tables.php
-|   |-- seeders
-|   |   |-- data
-|   |   |   |-- category.json
-|   |   |   |-- deskripsi_template.json
-|   |   |   |-- products.json
-|   |   |   |-- testimonial.json
-|   |   |   `-- users.json
-|   |   |-- CategorySeeder.php
-|   |   |-- DatabaseSeeder.php
-|   |   |-- OrderItemSeeder.php
-|   |   |-- OrderSeeder.php
-|   |   |-- ProductSeeder.php
-|   |   |-- RatingSeeder.php
-|   |   |-- RecommendationSeeder.php
-|   |   |-- TestimonialSeeder.php
-|   |   `-- UserSeeder.php
-|   `-- database.sqlite
-|-- public
-|   |-- default_avatar.png
-|   |-- default_icon.png
-|   |-- default_product.png
-|   |-- favicon.ico
-|   |-- hot
-|   |-- index.php
-|   `-- robots.txt
-|-- resources
-|   |-- css
-|   |   `-- app.css
-|   |-- js
-|   |   |-- app.js
-|   |   `-- bootstrap.js
-|   `-- views
-|       |-- auth
-|       |   |-- passwords
-|       |   |   |-- email.blade.php
-|       |   |   `-- reset.blade.php
-|       |   |-- login.blade.php
-|       |   `-- register.blade.php
-|       |-- components
-|       |   `-- lamandepan
-|       |       |-- category-modal.blade.php
-|       |       |-- hero-banner.blade.php
-|       |       |-- product-card.blade.php
-|       |       `-- testimonial.blade.php
-|       |-- dashboard
-|       |   `-- index.blade.php
-|       |-- lamandepan
-|       |   `-- index.blade.php
-|       |-- layouts
-|       |   `-- app.blade.php
-|       `-- welcome.blade.php
-|-- routes
-|   |-- console.php
-|   `-- web.php
-|-- tests
-|   |-- Feature
-|   |   `-- ExampleTest.php
-|   |-- Unit
-|   |   `-- ExampleTest.php
-|   `-- TestCase.php
-|-- README.md
-|-- artisan
-|-- composer.json
-|-- composer.lock
-|-- package-lock.json
-|-- package.json
-|-- phpunit.xml
-`-- vite.config.js
+- **Rekomendasi Personalisasi**: Menampilkan produk berdasarkan riwayat pembelian dan preferensi pengguna.
+- **Analisis Pola Pembelian**: Menggunakan algoritma Apriori untuk menemukan itemset yang sering dibeli bersama.
+- **Dashboard Admin**: Untuk melihat hasil analisis dan mengelola data.
+- **Antarmuka Intuitif**: UI sederhana dan responsif untuk pengunjung dan admin.
+
+---
+
+## 📁 Struktur Direktori (Ringkasan)
+
+Proyek ini mengikuti struktur standar Laravel dengan tambahan fitur analisis dan rekomendasi.  
+Untuk detail struktur direktori lengkap, silakan lihat [di sini](#struktur-direktori-lengkap).
+
+---
+
+## 🚀 Cara Menjalankan Proyek
+
+### 1. Clone Repositori
+```bash
+git clone https://github.com/LycusCoder/Sistem-Rekomendasi-Produk-E-Commerce.git
+cd Sistem-Rekomendasi-Produk-E-Commerce
 ```
 
-## Cara Menjalankan Proyek
+### 2. Install Dependencies
+```bash
+composer install
+npm install
+```
 
-1. **Clone Repository**:
+### 3. Konfigurasi Database
+Salin file `.env.example` menjadi `.env`:
+```bash
+cp .env.example .env
+```
 
-    ```bash
-    git clone https://github.com/LycusCoder/Sistem-Rekomendasi-Produk-E-Commerce.git
-    cd Sistem-Rekomendasi-Produk-E-Commerce
-    ```
+Lalu ubah konfigurasi database di file `.env`:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sistem_rekomendasi
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-2. **Install Dependencies**:
+### 4. Generate Key
+```bash
+php artisan key:generate
+```
 
-    ```bash
-    composer install
-    npm install (Wajib Ingat)
-    ```
+### 5. Migrasi Database
+```bash
+php artisan migrate
+```
 
-3. **Konfigurasi Database**:
+### 6. Seed Data (Opsional)
+```bash
+php artisan db:seed
+```
 
-    - Salin file `.env.example` menjadi `.env`:
-        ```bash
-        cp .env.example .env
-        ```
-    - Edit file `.env` untuk mengatur koneksi database:
-        ```
-        DB_CONNECTION=mysql
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_DATABASE=sistem_rekomendasi
-        DB_USERNAME=root
-        DB_PASSWORD=
-        ```
+### 7. Jalankan Server
+```bash
+php artisan serve
+```
 
-4. **Migrasi Database**:
+Akses aplikasi di: http://127.0.0.1:8000
 
-    ```bash
-    php artisan migrate
-    ```
+---
 
-5. **Seed Data (Jika Ada)**:
+## 📁 Struktur Direktori Lengkap
 
-    ```bash
-    php artisan db:seed
-    ```
+Struktur folder lengkap bisa kamu lihat di file `README.md` atau langsung dari repositori.
 
-6. **Jalankan Server Laravel**:
+---
 
-    ```bash
-    php artisan serve
-    ```
+## 🤝 Kontribusi
 
-    - Aplikasi akan berjalan di `http://127.0.0.1:8000`.
+Kami sangat senang menerima kontribusi dari komunitas! Jika kamu tertarik untuk membantu pengembangan proyek ini:
 
-7. **Hasil**:
-    - Akses halaman rekomendasi produk dan analisis pola pembelian melalui antarmuka web.
+1. Fork repositori
+2. Buat branch baru (`git checkout -b fitur-baru`)
+3. Lakukan perubahan
+4. Commit dan push
+5. Buat Pull Request
 
-## Kontribusi
+Silakan baca file `CONTRIBUTING.md` untuk panduan lebih lanjut.
 
-Kami menerima kontribusi dari siapa pun! Jika Anda ingin berkontribusi, silakan buka issue atau pull request.
+---
 
-## Kontak
+## 📞 Kontak Tim
 
-Jika ada pertanyaan atau masukan, silakan hubungi:
+Jika ada pertanyaan atau ingin berdiskusi lebih lanjut, jangan ragu untuk menghubungi kami:
 
--   👨‍💻 [Muhammad Affif]: affif@nourivex.tech
--   🌟 [Yesa Anggit Prayugo]: yesaprayugo4@gmail.com
--   📝 [Siti Novia Desi Nurkhikmah]: sitinoviadesi@gmail.com
--   🚀 [Naufal Miftahul Arsyij]: arsyinaufal12@gmail.com
--   🎉 [Imzy Zulijar Setiawan]: imzyzulijar01@gmail.com
+- 👨‍💻 Muhammad Affif – affif@nourivex.tech
+- 🌟 Yesa Anggit Prayugo – yesaprayugo4@gmail.com
+- 📝 Siti Novia Desi Nurkhikmah – sitinoviadesi@gmail.com
+- 🚀 Naufal Miftahul Arsyij – arsyinaufal12@gmail.com
+- 🎉 Imzy Zulijar Setiawan – imzyzulijar01@gmail.com
 
-## Lisensi
+---
 
-Proyek ini dibuat di bawah lisensi [MIT License](LICENSE).
+## 📄 Lisensi
+
+Proyek ini dibuat di bawah lisensi MIT License. Silakan lihat file [`LICENSE`](LICENSE) untuk detail selengkapnya.
+
+---
+
+## 🏆 Dukung Kami
+
+Jika kamu menyukai proyek ini, jangan ragu untuk memberikan ⭐ pada repositorinya atau berkontribusi dalam pengembangan lebih lanjut!
