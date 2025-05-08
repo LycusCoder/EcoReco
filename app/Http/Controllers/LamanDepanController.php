@@ -125,7 +125,7 @@ class LamanDepanController extends Controller
                 [
                     'name' => 'Naufal Miftahul Arsyi',
                     'role' => 'DevOps Engineer',
-                    'image' => 'https://i.pravatar.cc/150?img=4', // foto profil Naufal
+                    'image' => 'https://i.imgur.com/KjZddsk.png', // foto profil Naufal
                     'bio' => 'Pengembang DevOps yang menjaga sistem berjalan lancar 24/7. Spesialis dalam automasi deployment dan monitoring aplikasi.'
                 ],
                 [
