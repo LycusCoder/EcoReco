@@ -113,13 +113,13 @@ class LamanDepanController extends Controller
                 [
                     'name' => 'Yesa Anggit Prayugo',
                     'role' => 'Frontend Developer',
-                    'image' => 'https://i.pravatar.cc/150?img=3', // foto profil Yesa
+                    'image' => 'https://i.imgur.com/ZG0m0fq.png', // foto profil Yesa
                     'bio' => 'Desainer UI/UX yang membuat antarmuka pengguna menjadi hidup. Berdedikasi tinggi dalam menciptakan pengalaman pengguna yang luar biasa dan responsif.'
                 ],
                 [
                     'name' => 'Siti Novia Desi Nurkhikmah',
                     'role' => 'Data Analyst',
-                    'image' => 'https://i.pravatar.cc/150?img=5', // foto profil Siti Novia
+                    'image' => 'https://i.imgur.com/qXLcxDe.jpeg', // foto profil Siti Novia
                     'bio' => 'Ahli analisis data yang mampu menjelajahi pola pembelian pengguna dengan Collaborative Filtering dan Apriori Algorithm. Memastikan rekomendasi produk tetap relevan dan akurat.'
                 ],
                 [
@@ -131,7 +131,7 @@ class LamanDepanController extends Controller
                 [
                     'name' => 'Imzy Zulijar Setiawan',
                     'role' => 'Quality Assurance (QA) Tester',
-                    'image' => 'https://i.pravatar.cc/150?img=6', // foto profil Imzy
+                    'image' => 'https://i.imgur.com/kkY4WYN.jpeg', // foto profil Imzy
                     'bio' => 'Tester yang tidak pernah puas sampai semua bug tertangani. Berdedikasi untuk memberikan pengalaman pengguna tanpa cela.'
                 ]
             ],
