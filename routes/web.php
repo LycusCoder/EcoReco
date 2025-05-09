@@ -11,6 +11,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\StaffDashboardController;
 use App\Http\Controllers\StaffProductController;
+use App\Http\Controllers\StaffOrderController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
@@ -127,24 +128,28 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'staff'])->prefix('staff')->group(function () {
     Route::get('/dashboard', [StaffDashboardController::class, 'index'])->name('staff.dashboard');
 
-    // Tambahan Route
+    // Orders
     Route::get('/orders', [StaffOrderController::class, 'index'])->name('staff.orders');
-    Route::get('/produk', [StaffProductController::class, 'index'])->name('staff.products');
-    Route::get('/testimonials', [StaffTestimonialController::class, 'index'])->name('staff.testimonials');
+    Route::put('/orders/{order}/status', [StaffOrderController::class, 'updateStatus'])->name('staff.orders.update.status');
+    // Route untuk cetak PDF
+    Route::get('/orders/{order}/pdf/preview', [StaffOrderController::class, 'previewPDF'])->name('staff.orders.pdf.preview');
+    Route::get('/orders/{order}/pdf/download', [StaffOrderController::class, 'generatePDF'])->name('staff.orders.pdf.download');
 
-    // Route untuk CRUD
-    Route::resource('products', StaffProductController::class)->except('show');
+    // Preview Invoice (HTML)
+    Route::get('/orders/{order}/preview', [StaffOrderController::class, 'previewInvoice'])->name('staff.orders.preview');
+
+    // Produk & Kategori
+    Route::resource('products', StaffProductController::class)
+    ->except('show')
+    ->names([
+        'index' => 'staff.products.index',
+        'create' => 'staff.products.create',
+        'store' => 'staff.products.store',
+        'edit' => 'staff.products.edit',
+        'update' => 'staff.products.update',
+        'destroy' => 'staff.products.destroy'
+    ]);
     Route::resource('categories', StaffCategoryController::class)->except('show');
-
-        // Produk Routes
-        Route::resource('products', StaffProductController::class)->names([
-            'index' => 'staff.products.index',
-            'create' => 'staff.products.create',
-            'store' => 'staff.products.store',
-            'edit' => 'staff.products.edit',
-            'update' => 'staff.products.update',
-            'destroy' => 'staff.products.destroy'
-        ]);
 });
 
 /*
