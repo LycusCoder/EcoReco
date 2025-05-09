@@ -1,6 +1,12 @@
+<!-- Header -->
 <header class="bg-gradient-to-r from-indigo-600 to-purple-600 shadow-xl">
     <div class="container mx-auto px-6 py-3">
         <div class="flex items-center justify-between">
+            <!-- Tombol Toggle Sidebar untuk Mobile -->
+            <button id="sidebar-toggle-header" class="lg:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-lg"></i>
+            </button>
+
             <!-- Logo/Title -->
             <div class="flex items-center space-x-2">
                 <h1 class="text-2xl font-bold text-white tracking-tight">
@@ -50,29 +56,3 @@
         </div>
     </div>
 </header>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const button = document.getElementById('user-menu-button');
-        const dropdown = document.getElementById('dropdown-menu');
-        const container = document.getElementById('user-dropdown-container');
-
-        // Toggle dropdown saat tombol diklik
-        button.addEventListener('click', function (e) {
-            e.stopPropagation();
-            const isVisible = !dropdown.classList.contains('invisible');
-            if (isVisible) {
-                dropdown.classList.add('opacity-0', 'invisible', 'scale-95');
-            } else {
-                dropdown.classList.remove('opacity-0', 'invisible', 'scale-95');
-            }
-        });
-
-        // Tutup dropdown saat klik di luar
-        document.addEventListener('click', function (e) {
-            if (!container.contains(e.target)) {
-                dropdown.classList.add('opacity-0', 'invisible', 'scale-95');
-            }
-        });
-    });
-</script>
