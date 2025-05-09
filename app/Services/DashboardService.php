@@ -5,41 +5,32 @@ namespace App\Services;
 use Carbon\Carbon;
 use App\Models\Product;
 use App\Models\Order;
-use App\Models\Testimonial;
 
 class DashboardService
 {
-    public function getDailyStats()
+    /**
+     * Ambil statistik berdasarkan rentang waktu sesuai label UI:
+     * today, week, month, year, all
+     */
+    public function getTimeFrameData(string $label): array
     {
+        $now = Carbon::now();
+
+        $start = match ($label) {
+            'today' => $now->copy()->startOfDay(),
+            'week'  => $now->copy()->subDays(7),
+            'month' => $now->copy()->startOfMonth(),
+            'year'  => $now->copy()->startOfYear(),
+            'all'   => Carbon::createFromTimestamp(0),
+            default => throw new \InvalidArgumentException("Invalid period: {$label}"),
+        };
+
+        $end = $now;
+
         return [
-            'products' => Product::whereDate('created_at', today())->count(),
-            'orders' => Order::whereDate('created_at', today())->count(),
-            'testimonials' => Testimonial::whereDate('created_at', today())->count(),
+            'ordersCount'   => Order::whereBetween('created_at', [$start, $end])->count(),
+            'productsCount' => Product::whereBetween('created_at', [$start, $end])->count(),
+            'salesAmount'   => Order::whereBetween('created_at', [$start, $end])->sum('total_price'),
         ];
-    }
-
-    public function getTimeFrameData()
-    {
-        $timeFrames = [
-            '24h' => Carbon::now()->subDay(),
-            '3d' => Carbon::now()->subDays(3),
-            '1w' => Carbon::now()->subWeek(),
-            '1m' => Carbon::now()->subMonth(),
-            '6m' => Carbon::now()->subMonths(6),
-            '1y' => Carbon::now()->subYear(),
-        ];
-
-        $data = [];
-        foreach ($timeFrames as $key => $date) {
-            $data[$key] = [
-                'products' => Product::where('created_at', '>=', $date)->count(),
-                'orders' => Order::where('created_at', '>=', $date)->count(),
-                'completed_orders' => Order::where('status', 'completed')
-                    ->where('created_at', '>=', $date)
-                    ->count(),
-            ];
-        }
-
-        return $data;
     }
 }

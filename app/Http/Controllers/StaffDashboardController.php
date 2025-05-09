@@ -2,79 +2,68 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use App\Models\Product;
+use Illuminate\Http\Request;
 use App\Models\Order;
-use App\Models\Category;
+use App\Models\Product;
 use App\Models\Testimonial;
 use App\Services\DashboardService;
 use Illuminate\Support\Facades\Cache;
 
 class StaffDashboardController extends Controller
 {
-    public function index(DashboardService $dashboardService)
+    protected DashboardService $dashboardService;
+
+    public function __construct(DashboardService $dashboardService)
     {
-        // Data Statistik Harian (Dengan Cache)
-        $dailyStats = Cache::remember('staff_daily_stats', 3600, function () {
-            return [
-                'products' => Product::whereDate('created_at', today())->count(),
-                'orders' => Order::whereDate('created_at', today())->count(),
-                'testimonials' => Testimonial::whereDate('created_at', today())->count(),
-            ];
-        });
+        $this->dashboardService = $dashboardService;
+    }
 
-        // Ambil jumlah produk baru dan pesanan baru hari ini
-        $newProductsCount = $dailyStats['products'] ?? 0;
-        $newOrdersCount = $dailyStats['orders'] ?? 0;
+    public function index()
+    {
+        // 1. Time frame statistik
+        $frames = ['today', 'week', 'month', 'year', 'all'];
+        $timeFrameData = [];
+        foreach ($frames as $frame) {
+            $timeFrameData[$frame] = $this->dashboardService->getTimeFrameData($frame);
+        }
 
-        // Hitung total penjualan bulan ini
-        $monthlySales = Order::where('status', 'completed')
-        ->whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])
-        ->sum('total_price');
+        // 2. Total produk & produk bulan ini
+        $totalProducts   = Cache::remember('total_products', 3600, fn() => Product::count());
+        $monthlyProducts = Cache::remember('monthly_products', 3600, fn() =>
+            Product::whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])->count()
+        );
 
-        // Data Berdasarkan Rentang Waktu (Menggunakan Service)
-        $timeFrameData = $dashboardService->getTimeFrameData();
+        // 3. Pesanan baru untuk badge
+        $newOrdersCount = $timeFrameData['today']['ordersCount'];
 
-        // Total Produk dan Produk Bulanan
-        $totalProducts = Cache::remember('total_products', 3600, function () {
-            return Product::count();
-        });
-
-        $monthlyProducts = Cache::remember('monthly_products', 3600, function () {
-            return Product::whereBetween('created_at', [
-                now()->startOfMonth(),
-                now()->endOfMonth(),
-            ])->count();
-        });
-
-        // Data Terbaru untuk Tabel
+        // 4. Data terbaru
         $recentData = [
-            'orders' => Order::with(['user:id,name,email'])
-                ->select('id', 'user_id', 'status', 'created_at')
-                ->orderByDesc('created_at')
-                ->limit(5)
-                ->get(),
-            'products' => Product::with(['category:id,name'])
-                ->select('id', 'name', 'category_id', 'created_at')
-                ->orderByDesc('created_at')
-                ->limit(5)
-                ->get(),
-            'testimonials' => Testimonial::with(['user:id,name,email'])
-                ->select('id', 'user_id', 'rating', 'comment', 'created_at')
-                ->orderByDesc('created_at')
-                ->limit(5)
-                ->get(),
+            'orders'       => Order::with('user')->latest()->limit(5)->get(),
+            'products'     => Product::with('category')->latest()->limit(5)->get(),
+            'testimonials' => Testimonial::with('user')->latest()->limit(5)->get(),
         ];
 
         return view('dashboard.staff.index', compact(
+            'timeFrameData',
             'totalProducts',
             'monthlyProducts',
-            'dailyStats',
-            'timeFrameData',
-            'newProductsCount',
             'newOrdersCount',
-            'monthlySales',
             'recentData'
         ));
+    }
+
+    /**
+     * AJAX endpoint (jika diperlukan)
+     */
+    public function getData(Request $request)
+    {
+        $period = $request->input('period', 'today');
+        $data   = $this->dashboardService->getTimeFrameData($period);
+
+        return response()->json([
+            'ordersCount'   => $data['ordersCount'],
+            'productsCount' => $data['productsCount'],
+            'salesAmount'   => $data['salesAmount'],
+        ]);
     }
 }

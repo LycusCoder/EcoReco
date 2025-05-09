@@ -128,6 +128,11 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'staff'])->prefix('staff')->group(function () {
     Route::get('/dashboard', [StaffDashboardController::class, 'index'])->name('staff.dashboard');
 
+     // Route untuk ambil data berdasarkan periode
+     Route::get('/dashboard/data', [StaffDashboardController::class, 'getData'])
+     ->name('staff.dashboard.data');
+
+
     // Orders
     Route::get('/orders', [StaffOrderController::class, 'index'])->name('staff.orders');
     Route::put('/orders/{order}/status', [StaffOrderController::class, 'updateStatus'])->name('staff.orders.update.status');
