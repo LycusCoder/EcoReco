@@ -128,10 +128,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'staff'])->prefix('staff')->group(function () {
     Route::get('/dashboard', [StaffDashboardController::class, 'index'])->name('staff.dashboard');
 
-     // Route untuk ambil data berdasarkan periode
-     Route::get('/dashboard/data', [StaffDashboardController::class, 'getData'])
-     ->name('staff.dashboard.data');
+    // [BARU] Endpoint API untuk data chart
+    Route::get('/dashboard/chart-data', [StaffDashboardController::class, 'getChartData'])->name('staff.dashboard.chart_data');
+    Route::get('/dashboard/pie-chart-data', [StaffDashboardController::class, 'getPieChartData'])->name('staff.dashboard.pie_chart_data');
 
+    // [BARU] Endpoint untuk ekspor dinamis
+    Route::get('/dashboard/export', [StaffDashboardController::class, 'export'])->name('staff.dashboard.export');
 
     // Orders
     Route::get('/orders', [StaffOrderController::class, 'index'])->name('staff.orders');
@@ -167,3 +169,5 @@ Route::get('/generate-recommendations', function () {
     $controller->generateAprioriRecommendations();
     return "Rekomendasi berhasil di-generate!";
 });
+
+

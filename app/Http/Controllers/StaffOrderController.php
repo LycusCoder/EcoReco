@@ -38,7 +38,6 @@ class StaffOrderController extends Controller
             ])->count();
         });
 
-        // Ambil produk dan generate image_url
         $products = Product::with('category')->latest()->paginate(10);
 
         $products->getCollection()->transform(function ($product) {
@@ -88,9 +87,6 @@ class StaffOrderController extends Controller
         return redirect()->back()->with('success', 'Status pesanan berhasil diubah.');
     }
 
-    /**
-     * Preview HTML Invoice untuk debugging
-     */
     public function previewInvoice(Order $order)
     {
         $order->load('user', 'orderItems.product');
@@ -106,9 +102,6 @@ class StaffOrderController extends Controller
         return view('dashboard.staff.orders.invoice', $data);
     }
 
-    /**
-     * Stream PDF ke browser sebagai preview
-     */
     public function previewPDF(Order $order)
     {
         $order->load('user', 'orderItems.product');
@@ -120,49 +113,8 @@ class StaffOrderController extends Controller
             'date' => now()->format('d F Y H:i'),
         ];
 
-        // Render view ke string
         $html = view('dashboard.staff.orders.invoice', $data)->render();
 
-        // Inisialisasi mPDF
-        $mpdf = new Mpdf([
-            'mode' => 'utf-8',
-            'format' => 'A4',
-            'default_font' => 'DejaVuSans', // Font UTF-8 friendly
-            'margin_left' => 15,
-            'margin_right' => 15,
-            'margin_top' => 20,
-            'margin_bottom' => 20,
-            'margin_header' => 10,
-            'margin_footer' => 10,
-        ]);
-
-        // Tambahkan HTML
-        $mpdf->WriteHTML($html);
-
-        // Output sebagai preview di browser
-        return response($mpdf->Output('', 'I'), 200)
-            ->header('Content-Type', 'application/pdf');
-    }
-
-    /**
-     * Download PDF file
-     */
-    public function generatePDF(Order $order)
-    {
-        $order->load('user', 'orderItems.product');
-
-        $data = [
-            'order' => $order,
-            'items' => $order->orderItems,
-            'user' => $order->user,
-            'total_price' => $order->total_price,
-            'date' => now()->format('d F Y H:i'),
-        ];
-
-        // Render view ke string
-        $html = view('dashboard.staff.orders.invoice', $data)->render();
-
-        // Inisialisasi mPDF
         $mpdf = new Mpdf([
             'mode' => 'utf-8',
             'format' => 'A4',
@@ -175,10 +127,39 @@ class StaffOrderController extends Controller
             'margin_footer' => 10,
         ]);
 
-        // Tambahkan HTML
         $mpdf->WriteHTML($html);
 
-        // Download file PDF
+        return response($mpdf->Output('', 'I'), 200)
+            ->header('Content-Type', 'application/pdf');
+    }
+
+    public function generatePDF(Order $order)
+    {
+        $order->load('user', 'orderItems.product');
+        $data = [
+            'order' => $order,
+            'items' => $order->orderItems,
+            'user' => $order->user,
+            'total_price' => $order->total_price,
+            'date' => now()->format('d F Y H:i'),
+        ];
+
+        $html = view('dashboard.staff.orders.invoice', $data)->render();
+
+        $mpdf = new Mpdf([
+            'mode' => 'utf-8',
+            'format' => 'A4',
+            'default_font' => 'DejaVuSans',
+            'margin_left' => 15,
+            'margin_right' => 15,
+            'margin_top' => 20,
+            'margin_bottom' => 20,
+            'margin_header' => 10,
+            'margin_footer' => 10,
+        ]);
+
+        $mpdf->WriteHTML($html);
+
         return response($mpdf->Output("invoice-order-{$order->id}.pdf", 'D'), 200)
             ->header('Content-Type', 'application/pdf');
     }

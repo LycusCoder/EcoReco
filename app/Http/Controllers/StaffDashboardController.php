@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\DashboardService;
 use App\Models\Order;
 use App\Models\Product;
-use App\Models\Testimonial;
-use App\Services\DashboardService;
-use Illuminate\Support\Facades\Cache;
+use App\Models\User;
+use App\Exports\OrdersExport;
+use App\Exports\ProductsExport;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StaffDashboardController extends Controller
 {
@@ -18,52 +21,61 @@ class StaffDashboardController extends Controller
         $this->dashboardService = $dashboardService;
     }
 
+    /**
+     * Menampilkan halaman utama dashboard staff.
+     */
     public function index()
     {
-        // 1. Time frame statistik
-        $frames = ['today', 'week', 'month', 'year', 'all'];
-        $timeFrameData = [];
-        foreach ($frames as $frame) {
-            $timeFrameData[$frame] = $this->dashboardService->getTimeFrameData($frame);
-        }
-
-        // 2. Total produk & produk bulan ini
-        $totalProducts   = Cache::remember('total_products', 3600, fn() => Product::count());
-        $monthlyProducts = Cache::remember('monthly_products', 3600, fn() =>
-            Product::whereBetween('created_at', [now()->startOfMonth(), now()->endOfMonth()])->count()
-        );
-
-        // 3. Pesanan baru untuk badge
-        $newOrdersCount = $timeFrameData['today']['ordersCount'];
-
-        // 4. Data terbaru
-        $recentData = [
-            'orders'       => Order::with('user')->latest()->limit(5)->get(),
-            'products'     => Product::with('category')->latest()->limit(5)->get(),
-            'testimonials' => Testimonial::with('user')->latest()->limit(5)->get(),
-        ];
-
-        return view('dashboard.staff.index', compact(
-            'timeFrameData',
-            'totalProducts',
-            'monthlyProducts',
-            'newOrdersCount',
-            'recentData'
-        ));
+        $summary = $this->dashboardService->getSummaryData();
+        $recentData = $this->dashboardService->getRecentActivityData();
+        return view('dashboard.staff.index', compact('summary', 'recentData'));
     }
 
     /**
-     * AJAX endpoint (jika diperlukan)
+     * Endpoint API untuk mengambil data chart time-series (Line/Bar).
      */
-    public function getData(Request $request)
+    public function getChartData(Request $request)
     {
         $period = $request->input('period', 'today');
-        $data   = $this->dashboardService->getTimeFrameData($period);
+        $data = $this->dashboardService->getDetailedChartData($period);
+        return response()->json($data);
+    }
 
-        return response()->json([
-            'ordersCount'   => $data['ordersCount'],
-            'productsCount' => $data['productsCount'],
-            'salesAmount'   => $data['salesAmount'],
-        ]);
+    /**
+     * Endpoint API untuk mengambil data Pie Chart.
+     */
+    public function getPieChartData()
+    {
+        $data = $this->dashboardService->getPieChartData();
+        return response()->json($data);
+    }
+
+    /**
+     * Menangani ekspor data ke Excel secara dinamis.
+     */
+    public function export(Request $request)
+    {
+        $type = $request->input('type', 'orders');
+        $fileName = 'export_' . $type . '_' . now()->format('Ymd_His') . '.xlsx';
+
+        $exportClass = match ($type) {
+            'products' => new ProductsExport(),
+            'users' => new UsersExport(),
+            default => new OrdersExport(),
+        };
+
+        return Excel::download($exportClass, $fileName);
+    }
+
+    /**
+     * Menangani ekspor chart sebagai gambar.
+     */
+    public function exportChart(Request $request)
+    {
+        $chartType = $request->input('type', 'main'); // 'main' untuk Statistik Pesanan, 'pie' untuk Top 5 Produk
+        $period = $request->input('period', 'today'); // Periode untuk chart utama
+
+        // Logika sederhana untuk simulasi (data dummy, karena Chart.js perlu render di client)
+        return response()->json(['status' => 'success', 'type' => $chartType, 'period' => $period]);
     }
 }
