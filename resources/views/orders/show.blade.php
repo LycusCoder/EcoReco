@@ -58,80 +58,92 @@
         </div>
 
         <!-- Informasi Pesanan -->
+<div>
+    <div class="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-lg p-6 sticky top-4 space-y-5 border border-gray-100 transition-all duration-300 hover:shadow-xl">
+        <h2 class="text-xl font-bold flex items-center text-gray-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Informasi Pesanan
+        </h2>
+
+        <!-- Tanggal Pesanan -->
         <div>
-            <div class="bg-white rounded-lg shadow-md p-6 sticky top-4 space-y-4">
-                <h2 class="text-xl font-semibold flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    Informasi Pesanan
-                </h2>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Tanggal Pesanan</h3>
+            <p class="text-gray-700 mt-1">{{ $order->created_at->format('d M Y H:i') }}</p>
+        </div>
 
-                <!-- Tanggal Pesanan -->
-                <div>
-                    <h3 class="text-sm font-medium text-gray-500">Tanggal Pesanan</h3>
-                    <p class="text-gray-800">{{ $order->created_at->format('d M Y H:i') }}</p>
-                </div>
+        <!-- Metode Pembayaran -->
+        <div>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Metode Pembayaran</h3>
+            <div class="flex items-center gap-2 mt-1">
+                @switch($order->payment_method)
+                    @case('credit_card')
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v2H4v-2zm0 4h6v2H4v-2z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-gray-700">{{ ucfirst($order->payment_method) }}</span>
+                        @break
 
-                <!-- Metode Pembayaran -->
-                <div>
-                    <h3 class="text-sm font-medium text-gray-500">Metode Pembayaran</h3>
-                    <div class="flex items-center gap-2">
-                        @switch($order->payment_method)
-                            @case('credit_card')
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5z" />
-                                </svg>
-                                <span class="text-gray-800">{{ ucfirst($order->payment_method) }}</span>
-                                @break
+                    @case('cod')
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.965 1.586a1 1 0 01.622 1.11l-.344 1.032a1 1 0 01-.94.651H13v4h1.5a1 1 0 110 2H5a1 1 0 110-2H6.5V7H5a1 1 0 11-.344-1.94l.344-1.033a1 1 0 01.622-1.11L10 3.323V2a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-gray-700">{{ ucfirst($order->payment_method) }}</span>
+                        @break
 
-                            @case('cod')
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9l7-7 9 9M5 9l7 7-9-9" />
-                                </svg>
-                                <span class="text-gray-800">{{ ucfirst($order->payment_method) }}</span>
-                                @break
+                    @case('transfer')
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm10 3a1 1 0 11-2 0 1 1 0 012 0zm-4 2a1 1 0 11-2 0 1 1 0 012 0zM5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-gray-700">{{ ucfirst($order->payment_method) }}</span>
+                        @break
 
-                            @case('transfer')
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V5m8 0v6M3 8l7-7 7 7M3 8l7 7 7-7" />
-                                </svg>
-                                <span class="text-gray-800">{{ ucfirst($order->payment_method) }}</span>
-                                @break
-
-                            @default
-                                <span class="text-gray-800">{{ ucfirst($order->payment_method) }}</span>
-                        @endswitch
-                    </div>
-                </div>
-
-                <!-- Status Pesanan -->
-                <div>
-                    <h3 class="text-sm font-medium text-gray-500">Status Pesanan</h3>
-                    <span class="px-3 py-1 rounded-full text-sm font-medium
-                        @if($order->status == 'completed') bg-green-100 text-green-800
-                        @elseif($order->status == 'processing') bg-blue-100 text-blue-800
-                        @elseif($order->status == 'cancelled') bg-red-100 text-red-800
-                        @else bg-yellow-100 text-yellow-800 @endif">
-                        {{ ucfirst($order->status) }}
-                    </span>
-                </div>
-
-                <!-- Alamat Pengiriman -->
-                <div>
-                    <h3 class="text-sm font-medium text-gray-500">Alamat Pengiriman</h3>
-                    <p class="text-gray-800">{{ $order->shipping_address }}</p>
-                </div>
-
-                <!-- Tombol Kembali -->
-                <div class="mt-6">
-                    <a href="{{ route('orders.index') }}"
-                       class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
-                        Kembali ke Riwayat Pesanan
-                    </a>
-                </div>
+                    @default
+                        <span class="text-gray-700">{{ ucfirst($order->payment_method) }}</span>
+                @endswitch
             </div>
         </div>
+
+        <!-- Status Pesanan -->
+        <div>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Status Pesanan</h3>
+            <span class="inline-flex items-center px-3 py-1 mt-1 rounded-full text-xs font-medium
+                @if($order->status == 'completed') bg-green-100 text-green-800
+                @elseif($order->status == 'processing') bg-blue-100 text-blue-800
+                @elseif($order->status == 'cancelled') bg-red-100 text-red-800
+                @else bg-yellow-100 text-yellow-800 @endif">
+                {{ ucfirst($order->status) }}
+            </span>
+        </div>
+
+        <!-- Alamat Pengiriman -->
+        <div>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Alamat Pengiriman</h3>
+            <p class="text-gray-700 mt-1">{{ $order->shipping_address }}</p>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="mt-6 grid grid-cols-1 gap-3">
+            <a href="{{ route('orders.previewInvoice', $order->id) }}"
+               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-colors text-center">
+                Lihat Invoice
+            </a>
+            <a href="{{ route('orders.previewPDF', $order->id) }}"
+               class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-full transition-colors text-center">
+                Unduh Invoice PDF
+            </a>
+        </div>
+
+        <!-- Tombol Kembali -->
+        <div class="mt-4">
+            <a href="{{ route('orders.index') }}"
+               class="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-full transition-colors text-center block">
+                Kembali ke Riwayat Pesanan
+            </a>
+        </div>
+    </div>
+</div>
     </div>
 </div>
 @endsection

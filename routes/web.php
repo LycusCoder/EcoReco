@@ -118,6 +118,8 @@ Route::middleware('auth')->group(function () {
     Route::prefix('orders')->group(function () {
         Route::get('/', [OrderController::class, 'index'])->name('orders.index');
         Route::get('/{order}', [OrderController::class, 'show'])->name('orders.show');
+        Route::get('/{order}/preview-invoice', [OrderController::class, 'previewInvoice'])->name('orders.previewInvoice');
+        Route::get('/{order}/preview-pdf', [OrderController::class, 'previewPDF'])->name('orders.previewPDF');
     });
 
     // Product rating route
@@ -156,7 +158,7 @@ Route::middleware(['auth', 'staff'])->prefix('staff')->group(function () {
         'update' => 'staff.products.update',
         'destroy' => 'staff.products.destroy'
     ]);
-    Route::resource('categories', StaffCategoryController::class)->except('show');
+    //Route::resource('categories', StaffCategoryController::class)->except('show');
 });
 
 /*
