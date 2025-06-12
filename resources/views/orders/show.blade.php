@@ -13,6 +13,97 @@
             {{ ucfirst($order->status) }}
         </span>
     </div>
+        <!-- TimLine Section -->
+        <div class="mb-8 p-4 sm:p-6 bg-white rounded-xl shadow-lg overflow-hidden">
+            <h3 class="text-lg font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-3">Perjalanan Pesanan</h3>
+
+            @php
+                $statuses = [
+                    'pending' => ['label' => 'Dibuat', 'icon' => 'fas fa-file-alt'],
+                    'processing' => ['label' => 'Diproses', 'icon' => 'fas fa-cogs'],
+                    'shipped' => ['label' => 'Dikirim', 'icon' => 'fas fa-truck'],
+                    'completed' => ['label' => 'Selesai', 'icon' => 'fas fa-check-circle']
+                ];
+                $statusKeys = array_keys($statuses);
+                $currentStatusIndex = array_search($order->status, $statusKeys);
+
+                if ($order->status === 'cancelled') {
+                    $currentStatusIndex = -1;
+                }
+            @endphp
+
+            @if($order->status === 'cancelled')
+                <div class="flex items-center p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
+                    <i class="fas fa-times-circle text-red-500 text-2xl mr-4"></i>
+                    <div>
+                        <p class="font-bold text-red-800">Pesanan Dibatalkan</p>
+                        <p class="text-sm text-red-700">Pesanan ini telah dibatalkan.</p>
+                    </div>
+                </div>
+            @else
+                {{-- Wrapper untuk scroll di layar kecil --}}
+                <div class="w-full overflow-x-auto pb-4 scrollbar-hide">
+                    <div class="flex items-start justify-between min-w-[480px] relative">
+                        {{-- Garis background --}}
+                        <div class="absolute top-5 left-0 w-full h-1 bg-gray-200" aria-hidden="true"></div>
+                        
+                        {{-- Garis progress aktif --}}
+                        <div class="absolute top-5 left-0 h-1 bg-blue-600 transition-all duration-500" style="width: {{ $currentStatusIndex > 0 ? ($currentStatusIndex / (count($statuses) - 1)) * 100 : 0 }}%;" aria-hidden="true"></div>
+
+                        @foreach ($statuses as $statusKey => $statusData)
+                            @php
+                                $statusIndex = array_search($statusKey, $statusKeys);
+                                $isCompleted = $currentStatusIndex !== false && $statusIndex < $currentStatusIndex;
+                                $isCurrent = $currentStatusIndex !== false && $statusIndex == $currentStatusIndex;
+                                $isFuture = $currentStatusIndex === false || $statusIndex > $currentStatusIndex;
+                            @endphp
+
+                            <div class="relative z-10 flex-1 flex flex-col items-center text-center px-2">
+                                {{-- Lingkaran ikon --}}
+                                <div @class([
+                                    'w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300',
+                                    'bg-blue-600 border-blue-600 text-white' => $isCompleted,
+                                    'bg-blue-600 border-blue-600 text-white animate-pulse shadow-lg shadow-blue-500/50' => $isCurrent,
+                                    'bg-white border-gray-300 text-gray-400' => $isFuture,
+                                ])>
+                                <i class="{{ $statusData['icon'] }} text-lg"></i>
+                                </div>
+                                
+                                {{-- Label --}}
+                                <p @class([
+                                    'text-xs sm:text-sm mt-2 font-medium w-20',
+                                    'text-blue-700' => $isCurrent,
+                                    'text-gray-500' => $isFuture,
+                                    'text-gray-800' => $isCompleted
+                                ])>
+                                {{ $statusData['label'] }}
+                                </p>
+
+                               
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+        </div>
+
+        {{-- Tambahkan style ini jika belum ada --}}
+        <style>
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+            }
+            @keyframes bounce-slow {
+            0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+            }
+            .animate-bounce-slow {
+                animation: bounce-slow 2s infinite;
+            }
+        </style>
 
     <!-- Grid Layout -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
